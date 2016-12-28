@@ -1,0 +1,147 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ControlSystem}
+\pmcreated{2013-03-22 14:22:59}
+\pmmodified{2013-03-22 14:22:59}
+\pmowner{ppirrip}{5555}
+\pmmodifier{ppirrip}{5555}
+\pmtitle{control system}
+\pmrecord{9}{35876}
+\pmprivacy{1}
+\pmauthor{ppirrip}{5555}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{93A10}
+\pmrelated{SystemDefinitions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\u#1{\,\mathrm{#1}}
+\begin{document}
+The sole objective of control system is to generate feasible inputs
+to the plant (e.g. dynamic systems) such that it will operate as it
+intended to under a wide range of operating conditions.
+
+Examples of control systems: Cruise control, auto pilot, rice cooker.
+
+For a general finite dimensional dynamic system in its ODE form,
+
+\begin{align}
+  \label{eq:eq1}
+  \dot{x} &= f(x(t),t) + g(x(t), u(t), t), \\
+  y &= h(x(t),t), \nonumber
+\end{align}
+
+where $x \in \mathbb{R}^n$ is the state, $y \in \mathbb{R}^l$ is the
+output and $u \in \mathbb{R}^m$ is the control input of the system.
+In the control literature, equation \ref{eq:eq1} is general referred
+as the plant, where the function $f: \mathbb{R}^n \times
+\mathbb{R} \rightarrow \mathbb{R}^n$ governs the system dynamics, $g:
+\mathbb{R}^m \times \mathbb{R}^n \times \mathbb{R} \rightarrow
+\mathbb{R}^n$ determines how the input (control signals)
+influence the state $x$ via {\em actuators} (e.g. gas turbine) and
+ $h: \mathbb{R}^n \times \mathbb{R} \rightarrow \mathbb{R}^l$
+ determines how the state generates the output signal.  If $m$ is equal to $n$, the plant is
+{\em fully actuated}. If $m < n$ then the plant is {\em under actuated}
+and otherwise the plant is {\em over actuated}. For a plant that is not
+explicitly dependent in time $t$, such system is called a
+{\em Autonomous} system.   The main
+ differece between a control system and a general dynamic system is
+ the additional signal $u(t)$.
+
+For example, to control an airplane, the control system has to control
+the {\em thrust}, {\em flaps}, {\em aileron} and {\em rudder}, which they
+are the control signals of the system $u$.  Those control input
+influence the system state $x$ such as {\em speed} (with thrust),
+{\em attitude} and {\em orientation} (with flaps, aileron and rudder).
+To physically alter the state of the airplane, actuators such as
+gas turbines are needed, which are controlled by the control signals $u$.
+
+The control signal $u$ can be generated in a {\em closed-loop} fashion
+or {\em open-loop} fashion.  An open-loop control system generates $u$
+with the user, or operator supplied reference state $x_{d}$ or output
+$y_{d}$ only; meanwhile closed-loop control system uses both reference
+and {\em feedback} signals that are usually measured from
+{\em sensors}. In the airplane attitude control example, the desired
+attitude is usually represented in roll-pitch-yaw angle
+representation, and these signals are measurable by attaching
+sensors to the flaps, aileron and rudder.  In engineering
+practice, only closed-loop control systems should be used, since
+open-loop systems are not {\em robust} against uncertainties, modeling
+errors and measurement errors.
+
+If a closed-loop control system is based on state feedback, such
+contol system is called a {\em state-feedback} control system. By the
+same token, a {\em output-feedback} control system is  based on output
+feedback only.  Notice that output signals are available for feedback
+by definition, however in reality not all the states are mesurable.  If
+a state-feedback control system with all the states available for
+feedback, it is called a {\em full-state feedback} system and otherwise
+is call {\em partial-state feedback} system, which usually requires a {\em state
+  observer} (e.g. Kalman filter) to estimate the unavailable states.
+
+% -----------------------
+To illustrate the simple concept of control systems, we will use a
+simple example.  A truck driver is required to travel 1000 Km in 10
+hours.  To relive the stress on the driver's heel, he has placed a stick
+to the gas paddle so the car travels at $\u{100Km/h}$.  Under perfect
+conditions, the driver will reach the destination in the allocated
+time.  However, a certain section of the road is up-hill, so the truck
+slowed down by a considerable amount and will not arrive it's
+destination in time.  To remedy this problem, the driver 'implemented'
+a simple solution using the speed-o-meter such that the gas paddle position
+$p_{set}$ of the truck is now depends on the current speed
+$v_{current}$ of the truck, $p_{set} = -K (v_{current} - \u{100Km/h})$,
+where $K$ is just an adjustable parameter.  So if the truck is running
+too slow (e.g. up-hill), $p_{set}$  will be positive (more gas to the
+engine) hence speed will increase to maintain the desired speed, so
+vice-versa for the down-hill case.  
+
+%However, the *** is
+%only measuring the engine's speed, not the real speed of the truck
+%that is traveling. If there is a strong wind blowing against the
+%truck, and it is strong enough to slow down the truck, the *** will not be
+%able tell, and hence the truck will arrive late.
+
+In this example, we have outlined all the major components of a
+typical control system:
+
+\begin{itemize}
+  \item Actuator: engine,
+  \item Sensor: speed-o-meter,
+  \item Plant: truck,
+  \item Control input: gas paddle,
+  \item Control objective: 1000 Km in 10 hrs,
+  \item Control law: $p_{set} = -K (v_{current} - 100Km/h)$,
+  %\item Noise/uncertainity: strong wind.
+\end{itemize}
+
+The science aspect of control systems is the study of
+design, synthesis and analysis of control systems using mathematical
+concepts, and the engineering aspect of controls systems is to
+implement, construct and adjust the control system according to
+real-life situation and limitations.
+
+%Special thanks to Prof. John Chen In Ryerson Polytechnic University.
+%%%%%
+%%%%%
+\end{document}

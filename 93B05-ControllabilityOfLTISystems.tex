@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ControllabilityOfLTISystems}
+\pmcreated{2013-03-22 14:32:50}
+\pmmodified{2013-03-22 14:32:50}
+\pmowner{GeraW}{6138}
+\pmmodifier{GeraW}{6138}
+\pmtitle{controllability of LTI systems}
+\pmrecord{5}{36095}
+\pmprivacy{1}
+\pmauthor{GeraW}{6138}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{93B05}
+\pmdefines{controllability matrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider the linear time invariant (LTI) system given by:
+\[
+                   \dot{x} = Ax + Bu
+\]
+where $A$ is an $n \times n$ matrix, $B$ is an $n \times m$ matrix, $u$ is an $m \times 1$ vector - called the control or input vector, $x$ is an $n
+\times 1$ vector - called the state vector, and $\dot{x}$ denotes the time derivative of $x$.
+
+
+{\bf Definition Of Controllability Matrix For LTI Systems:} The controllability matrix of the above LTI system is defined by the pair $(A,B)$ as follows:
+\[
+             C(A,B) = \left[ B , AB,  A^{2}B,  A^{3}B,..., A^{n-1}B \right]
+\]
+
+{\bf Test for Controllability of LTI Systems:} The above LTI system $(A,B)$ is controllable if and only if the controllability matrix $C(A,B)$ has rank $n$;
+i.e. has $n$ linearly independent columns.
+%%%%%
+%%%%%
+\end{document}

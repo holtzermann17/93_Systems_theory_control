@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TransferFunction}
+\pmcreated{2013-03-22 14:02:41}
+\pmmodified{2013-03-22 14:02:41}
+\pmowner{lha}{3057}
+\pmmodifier{lha}{3057}
+\pmtitle{transfer function}
+\pmrecord{13}{35394}
+\pmprivacy{1}
+\pmauthor{lha}{3057}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{93A10}
+\pmdefines{frequency domain}
+\pmdefines{stable}
+\pmdefines{unstable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{transfer function} of a linear dynamical system is the ratio of the Laplace transform of its output to the Laplace transform of its input.  In systems theory, the Laplace transform is called the ``frequency domain'' representation of the system.
+
+Consider a canonical dynamical system
+\begin{eqnarray*}
+    \dot x(t) &=& A x(t) + B u(t) \\
+    y (t) &=& C x(t) + D u(t)
+\end{eqnarray*}
+with input $u: R \mapsto R^n$, output $y: R \mapsto R^m$ and state $x:R \mapsto R^p$, and $(A,B,C,D)$ are constant matrices of conformable sizes.
+
+The frequency domain representation is
+$$
+    y(s) = (D + C(sI - A)^{-1}B)u(s),
+$$
+and thus the transfer function matrix is $D + C(sI - A)^{-1}B$.
+
+In the case of single-input-single-output systems ($m=n=1$), the transfer function is commonly expressed as a rational function of $s$:
+$$
+    H(s) = \frac{\prod_{i=0}^Z (s - z_i)}{\prod_{i=0}^P (s - p_i)}.
+$$
+The values $z_i$ are called the zeros of $H(s)$, and the values $p_i$ are called the poles.  If any of the poles has positive real part, then the transfer function is termed \emph{unstable}; if all of the poles have strictly negative real part, it is \emph{stable}.
+%%%%%
+%%%%%
+\end{document}

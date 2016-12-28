@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SystemModel}
+\pmcreated{2013-03-22 18:33:34}
+\pmmodified{2013-03-22 18:33:34}
+\pmowner{camillio}{22337}
+\pmmodifier{camillio}{22337}
+\pmtitle{system model}
+\pmrecord{6}{41282}
+\pmprivacy{1}
+\pmauthor{camillio}{22337}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{93E03}
+%\pmkeywords{Stochastic system}
+%\pmkeywords{system identification}
+%\pmkeywords{system model}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $t = 1, 2,\ldots$ denote discrete time instants. By a {\it system model} we mean a mathematical model defined by a conditional probability density function $f(y_{t}|u_{t}, d(t-1))$ where
+\begin{description}
+  \item [$y_{t}$] is the system output in time $t$,
+  \item [$u_{t}$] is the system input and 
+  \item [$d(t-1)$] denotes the sequence of data $d_{0}, \ldots, d_{t-1}$ where $d_{t} = (u_{t}, y_{t})$.
+\end{description}
+Such a system has time-invariant (constant) parameters. 
+If the model parameters are unknown (uncertain, variable), we introduce the definition in the form $f(y_{t}|u_{t}, d(t-1), \theta)$. Here, $\theta$ is a (possibly multi-dimensional) parameter.
+
+\begin{thebibliography}{99}
+  \bibitem{vP81}
+    Peterka, V., \emph{Bayesian Approach to System Identification}, in \emph{Trends and Progress in System Identification}, P. Ekhoff, Ed., pp. 239-304. Pergamon Press, Oxford, 1981
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

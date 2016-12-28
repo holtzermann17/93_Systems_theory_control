@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LinearTimeInvariantSystem}
+\pmcreated{2013-03-22 14:22:25}
+\pmmodified{2013-03-22 14:22:25}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{linear time invariant system}
+\pmrecord{11}{35864}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{93A10}
+\pmsynonym{LTI}{LinearTimeInvariantSystem}
+%\pmkeywords{LTI}
+\pmrelated{Controllability}
+\pmrelated{Observability}
+\pmrelated{SystemDefinitions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{linear time invariant  system} (LTI) is a linear dynamical system $T(p)$,
+
+\begin{align*}
+  y(k) &= T(p) \; u(k),
+\end{align*}
+
+with parameter $p$ that is time independent.  $y(k)$ denotes the
+system output and $u(k)$ denotes the input.  The independent variable
+$k$ can be denoted as time, index for a discrete sequences or
+differential operaters (e.g. such as $s$ in Laplace domain or $\omega$
+in frequency domain).
+
+For example, for a simple mass-spring-dashpot system, the system
+parameter $p$ can be selected as the mass $m$, spring constant $k$ and
+damping coefficient $d$.  The input $u$ to the said system can be chosen
+as the force applied to the mass and the output $y$ can be chosen as the
+mass's displacement.
+
+LTI system has the following properties.
+
+\begin{description}
+  \item[Linearity:]
+    If $y_1 = T x_1$ and $y_2 = T x_2$, then 
+    $$T \{\alpha x_1 + \beta x_2 \} = \alpha y_1 + \beta y_2 $$ 
+  \item[Time Invariance:]
+    If $y(k) = T x(k)$, then
+    $$ y(k+\delta_k) = T x(k + \delta_k) $$
+  \item[Associative:]
+    $$ T_1 \cdot ( T_2 \cdot T_3 ) = (T_1 \cdot T_2) \cdot T_3 $$
+  \item[Commutative:]
+    $$ T_1 \cdot T_2 = T_2 \cdot T_1 $$
+\end{description}
+
+A LTI system can be represented with the following:
+
+\begin{itemize}
+  \item Transfer function of Laplace transform variable $s$, which is commonly
+    used in control systems design.
+  \item Transfer function of Fourier transform variable $\omega$, which is
+    commonly used in communication theory and signal processing.
+  \item Transfer function of z-transform variable $z^{-1}$, which is
+    commonly used in digital signal processing (DSP).
+  \item State-space equations, which is commonly used in modern control
+    theory and mechanical systems.
+\end{itemize}
+
+Note that all transfer functions are LTI systems, but not all
+state-space equations are LTI systems.
+%%%%%
+%%%%%
+\end{document}

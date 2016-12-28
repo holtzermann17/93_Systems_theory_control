@@ -1,0 +1,267 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralSystemDefinitions}
+\pmcreated{2013-03-22 18:19:02}
+\pmmodified{2013-03-22 18:19:02}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{general system definitions}
+\pmrecord{31}{40943}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{93A30}
+\pmclassification{msc}{93A05}
+\pmclassification{msc}{93A13}
+\pmclassification{msc}{93A10}
+\pmsynonym{dynamic system}{GeneralSystemDefinitions}
+\pmsynonym{dynamic structure}{GeneralSystemDefinitions}
+\pmsynonym{general system}{GeneralSystemDefinitions}
+%\pmkeywords{system}
+%\pmkeywords{system dynamics}
+%\pmkeywords{configuration space topology and algebra}
+%\pmkeywords{dynamic system examples}
+%\pmkeywords{qualitative dynamics}
+%\pmkeywords{dynamic configuration functors}
+%\pmkeywords{qualitative biodynamics}
+%\pmkeywords{biosystem}
+%\pmkeywords{super-complex system}
+%\pmkeywords{generating class}
+%\pmkeywords{dynamic multi-stability}
+%\pmkeywords{biodynam}
+\pmrelated{SimilarityAndAnalogousSystemsDynamicAdjointness2}
+\pmrelated{CommutativeVsNonCommutativeDynamicModelingDiagrams}
+\pmrelated{GroupoidCDynamicalSystem}
+\pmrelated{AutonomousSystem}
+\pmrelated{SystemState}
+\pmrelated{RelationalSystem}
+\pmrelated{LinearTimeInvariantLTISystems}
+\pmrelated{DynamicalSystem}
+\pmrelated{Observability}
+\pmrelated{ControlSystems}
+\pmdefines{general dynamic system}
+\pmdefines{complex system}
+\pmdefines{system dynamics}
+\pmdefines{configuration space algebraic topology}
+\pmdefines{qualitative dynamics}
+\pmdefines{dynamic configuration functors}
+\pmdefines{qualitative biodynamics}
+\pmdefines{super-complex system}
+\pmdefines{generating class}
+\pmdefines{dynamic multi-stability}
+\pmdefines{biodynamics}
+\pmdefines{q}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\subsection{General dynamic systems descriptions as stable space-time structures}
+
+\subsubsection{Introduction: General system description}
+A \emph{general system} can be described as a dynamical `whole', or entity capable of maintaining its working conditions; more precise system definitions are as follows. 
+
+\begin{definition} 
+
+ A simple system is in general a \emph{bounded}, but not necessarily closed, entity-- here represented as a category of stable, interacting components with inputs and outputs from the system's environment, or as a supercategory for a complex system consisting of subsystems, or components, with internal boundaries among such subsystems. In order to define a `system' one therefore needs to specify the following data: 
+
+\begin{enumerate}
+\item components or subsystems;
+\item mutual interactions, relations or links; 
+\item a separation of the selected system by some boundary which distinguishes the system from its environment, without necessarily `closing' the system to material exchange with its environment;
+\item the specification of the system's environment;  
+\item the specification of the system's categorical structure and dynamics 
+(a supercategory will be required only when either the components or subsystems need be themselves considered as represented by a category , i.e. the system is in fact a \emph{super-system} of (sub)systems, as it is the case of \emph{emergent super-complex systems} or organisms).
+\end{enumerate}
+\end{definition}
+
+\subsubsection{Remarks}
+ Point (5) claims that a system should occupy either a macroscopic or a microscopic space-time region, but a system that comes into birth and dies off extremely rapidly may be considered either a short-lived process, or rather, a `resonance' --an instability rather than a system, although it may have significant effects as in the case of 
+`virtual particles', `virtual photons', etc., as in quantum electrodynamics and chromodynamics. Note also that there are many other, different mathematical definitions of systems, ranging from (systems of) coupled differential equations to operator formulations, semigroups, monoids, topological groupoid dynamic systems and dynamic categories. Clearly, the more useful system definitions include algebraic and/or topological structures rather than simple, discrete structure sets, classes or their categories. The main intuition behind this first understanding of system is well expressed by the following passage: ``The most general and fundamental property of a system is the 
+\emph{inter-dependence} of parts/components/sub-systems or variables.''
+
+ \emph{Inter-dependence} consists in the existence of determinate relationships among the parts or variables as contrasted with randomness or extreme variability. In other words, \emph{inter-dependence} is the presence or existence of a certain organizational order in the relationship among the components or subsystems which make up the system. It can be shown that such organizational order must either result in a \emph{stable attractor} or else it should occupy a \emph{stable space-time domain}, which is generally expressed in \emph{closed} systems by the concept of 
+\emph{equilibrium}. 
+
+ On the other hand, in non-equilibrium, open systems, such as living systems, one cannot have a static but only a \emph{dynamic self-maintenance} in a `state-space region' of the open system -- which cannot degenerate to either an equilibrium state or a single attractor space-time region. Thus, non-equilibrium, open systems that are capable of \emph{self-maintenance} will also be \emph{generic, or structurally-stable}: their arbitrary, small perturbation from a homeostatic maintenance regime does \textbf{not} result either in completely chaotic dynamics with a single attractor or the loss of their stability. It may however involve an ordered process of change - a process that follows a \emph{determinate, multi-stable pattern} rather than random variation relative to the starting point. 
+
+\subsection{General dynamic system definition}
+A formal (but natural) definition of a \emph{general dynamic system}, either simple or complex can also be specified as follows.
+
+\begin{definition}
+
+ A \emph{general dynamic system} $S_{GD}$ is a \emph{quintuple} 
+$([I,O], [\lambda: I \to O], \R_S , [\Delta: \R_S \to \R_S], \grp_B)$, where:
+
+\begin{enumerate}
+\item $I$ and $O$ are, respectively, the input and output manifolds of the system , $S_{GD}$;
+\item $\R_S$ is a category with structure determined by the components of $S_{GD}$ as objects and 
+with the links or relations between such components as morphisms;
+\item $\Delta: \R_S \to \R_S$ is the `dynamic transition' functor in the functor category $Aut_S$
+of system endomorphisms (which is endowed with a groupoid structure only in the case of reversible, 
+closed systems);
+\item $\lambda$ is the output `function or map' represented as a manifold homeomorphism;
+\item $\grp_B$ is a topological groupoid specifying the boundary, or boundaries, of $S_{GD}$.
+\end{enumerate}
+
+\end{definition}
+
+\textbf{Remark}.  We can proceed to define automata and certain simpler quantum systems
+as particular, or specialized, cases of the above general dynamic system quintuple. 
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,530 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DiscretizationOfContinuousSystems}
+\pmcreated{2013-03-22 15:50:45}
+\pmmodified{2013-03-22 15:50:45}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{discretization of continuous systems}
+\pmrecord{7}{37827}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{93C55}
+\pmsynonym{Transform}{DiscretizationOfContinuousSystems}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+% Modified .tex file
+%--------------------------------------------------------
+%\makeindex
+%\pagenumbering{roman}
+%\tableofcontents
+%\listoffigures
+%\listoftables
+%---------------------------------
+%\input setwmf
+%\input seteps
+%\begin{figure}[!hbtp]
+%\centerwmf{6in}{4in}{}
+%\caption{Open-loop simulink structure}
+%\label{yyy}
+%\end{figure}
+%See Fig.~\ref{yyy}
+%=========================================================
+%       Definitions                                 %
+% Latex abbrevs ----------------------------------------
+%\newcommand{\ba}{\begin{array}}
+%\newcommand{\ea}{\end{array}}
+%\newcommand{\bc}{\begin{center}}
+%\newcommand{\ec}{\end{center}}
+
+%\newcommand{\beqn}[1]{\begin{equation}\label{#1}}
+%\newcommand{\eeqn}{\end{equation}}
+%\newcommand{\be}{\begin{equation}}
+%\newcommand{\ee}{\end{equation}}
+
+%\newcommand{\beqnn}{\begin{eqnarray}}
+%\newcommand{\eeqnn}{\end{eqnarray}}
+\newcommand{\non}{\nonumber}
+%-------------------------------------------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+\newtheorem{property}{Property}
+\newtheorem{proposition}{Proposition}
+%-------------------------------------------------------
+\newcommand{\va}{\vspace*{5mm}}
+\newcommand{\vb}{\vspace*{10mm}}
+\newcommand{\vc}{\vspace*{15mm}}
+%\newcommand{\ha}{\mbox{}\hspace*{5mm}}
+%\newcommand{\hb}{\mbox{}\hspace*{10mm}}
+%\newcommand{\hc}{\mbox{}\hspace*{15mm}}
+\newcommand{\hsp}{\mbox{}\hspace{8mm}}
+%-------------------------------------------------------
+%\newcommand{\thetat}{{\theta}^{\T}}
+%\newcommand{\btheta}{\bar{\theta}}
+%\newcommand{\bthetat}{\bar{\theta}^{\T}}
+%\newcommand{\htheta}{\hat{\theta}}
+%\newcommand{\hthetat}{\hat{\theta}^{\T}}
+%\newcommand{\ttheta}{\tilde{\theta}}
+%\newcommand{\tthetat}{\tilde{\theta}^{\T}}
+
+%\newcommand{\varphit}{\varphi^{\T}}
+%\newcommand{\hvarphi}{\hat{\varphi}}
+%\newcommand{\hvarphit}{\hat{\varphi}^{\T}}
+
+%\newcommand{\hy}{\hat{y}}
+%\newcommand{\ty}{\tilde{y}}
+%\newcommand{\hu}{\hat{u}}
+%\newcommand{\tu}{\tilde{u}}
+
+\newcommand{\un}[1]{\underline{#1}\,}
+%--------------------------------------------
+% functions
+%\newcommand{\ejt}{{\rm e}^{\jjj\theta}}
+%\newcommand{\ejw}{{\rm e}^{\jjj\omega}}
+
+%\newcommand{\ddd}[1]{{\rm d}{#1}}
+%\newcommand{\eee}[1]{{\rm e}^{#1}}
+%\newcommand{\e}[1]{{\rm e}^{#1}}
+
+%\newcommand{\aaa}{{\rm a}}
+%\newcommand{\CCC}{{\rm C}}
+%\newcommand{\ccc}{{\rm c}}
+%\newcommand{\fff}{{\rm f}}
+%\newcommand{\jjj}{{\rm j}}
+%\newcommand{\HH}{{\rm H}}
+%\newcommand{\ooo}{{\rm o}}
+%--------------------------------------------
+%Â¿Ã•Ã?Ã„
+\newcommand{\C}{{\mathbb C}}
+\newcommand{\F}{{\mathbb F}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\Z}{{\mathbb Z}}
+%Ã•Ã½ÃŒÃ¥
+\newcommand{\E}{{\rm E}}
+\newcommand{\T}{{\rm T}}
+
+%
+\newcommand{\adj}{{\rm\,adj}}
+\newcommand{\AR}{{\rm AR}}
+\newcommand{\arctg}{{\rm arctg}}
+\newcommand{\asas}{{\rm a.s.}}
+
+\newcommand{\co}{{\rm co}}
+\newcommand{\col}{{\rm col}}
+\newcommand{\coeff}{{\rm coeff}}
+\newcommand{\const}{{\rm const}}
+\newcommand{\cov}{{\rm cov}}
+%\newcommand{\def}{{\rm def}}
+\newcommand{\diag}{{\rm diag}}
+
+\newcommand{\FFLS}{{\rm FFLS}}
+\newcommand{\grad}{{\rm grad}}
+\newcommand{\Ima}{{\rm Im}}
+\newcommand{\IV}{{\rm IV}}
+\newcommand{\LCM}{{\rm LCM}}
+\newcommand{\LS}{{\rm LS}}
+\newcommand{\msms}{{\rm m.s.}}
+\newcommand{\ns}{{\rm ns}}
+\newcommand{\ob}{{\rm ob}}
+\newcommand{\rank}{{\rm rank}}
+\newcommand{\Rea}{{\rm Re}}
+\newcommand{\sgn}{{\rm sgn}}
+%\newcommand{\th}{{\rm th}}
+\newcommand{\tg}{{\rm tg}}
+\newcommand{\tr}{{\rm tr}}
+\newcommand{\var}{{\rm var}}
+
+%\dim \det \exp \gcd
+%-----------matrices--------------------------------
+\newcommand{\vect}[2]{\left[\begin{array}{c} #1 \\  #2 \end{array} \right]}
+\newcommand{\vectt}[3]{\left[\begin{array}{c} #1 \\  #2 \\  #3 \end{array}\right]}
+\newcommand{\vectf}[4]{\left[\begin{array}{c} #1 \\  #2 \\  #3 \\ #4 \end{array}\right]}
+\newcommand{\vectfd}[4]{\left[\begin{array}{c} #1 \\  #2 \\  #3 \\  \vdots \\ #4 \end{array}\right]}
+\newcommand{\vectfive}[5]{\left[\begin{array}{c} #1 \\  #2 \\  #3 \\  #4 \\ #5 \end{array}\right]}
+\newcommand{\vectsix}[6]{\left[\begin{array}{c} #1 \\  #2 \\  #3 \\  #4 \\ #5 \\ #6 \end{array}\right]}
+
+\newcommand{\mtwo}[4]{\left[\begin{array}{cc}#1 & #2 \\  #3 & #4\end{array} \right]}
+
+\newcommand{\tfmat}[4]{\left[ \begin{array}{c|c} #1 & #2 \\  \hline
+                                                 #3 & #4 \end{array} \right] }
+%Â»Â¨ÃŒÃ¥Â´Ã³Ã?Â´-------------------------------------------------------------------------------------------------------
+\def\CalA{{\mathcal A}}
+\def\CalB{{\mathcal B}}
+\def\CalC{{\mathcal C}}
+\def\CalD{{\mathcal D}}
+\def\CalE{{\mathcal E}}
+\def\CalF{{\mathcal F}}
+\def\CalG{{\mathcal G}}
+\def\CalH{{\mathcal H}}
+\def\CalI{{\mathcal I}}
+\def\CalJ{{\mathcal J}}
+\def\CalK{{\mathcal K}}
+\def\CalL{{\mathcal L}}
+\def\CalM{{\mathcal M}}
+\def\CalN{{\mathcal N}}
+\def\CalO{{\mathcal O}}
+\def\CalP{{\mathcal P}}
+\def\CalQ{{\mathcal Q}}
+\def\CalR{{\mathcal R}}
+\def\CalS{{\mathcal S}}
+\def\CalT{{\mathcal T}}
+\def\CalU{{\mathcal U}}
+\def\CalV{{\mathcal V}}
+\def\CalW{{\mathcal W}}
+\def\CalX{{\mathcal X}}
+\def\CalY{{\mathcal Y}}
+\def\CalZ{{\mathcal Z}}
+%Ã•Ã½ÃŒÃ¥Ã?Â¡Ã?Â´-------------------------------------------------------
+\newcommand{\rma}{{\rm a}}
+\newcommand{\rmb}{{\rm b}}
+\newcommand{\rmc}{{\rm c}}
+\newcommand{\rmd}{{\rm d}}
+\newcommand{\rme}{{\rm e}}
+\newcommand{\rmf}{{\rm f}}
+\newcommand{\rmg}{{\rm g}}
+\newcommand{\rmh}{{\rm h}}
+\newcommand{\rmi}{{\rm i}}
+\newcommand{\rmj}{{\rm j}}
+\newcommand{\rmk}{{\rm k}}
+\newcommand{\rml}{{\rm l}}
+\newcommand{\rmm}{{\rm m}}
+\newcommand{\rmn}{{\rm n}}
+\newcommand{\rmo}{{\rm o}}
+\newcommand{\rmp}{{\rm p}}
+\newcommand{\rmq}{{\rm q}}
+\newcommand{\rmr}{{\rm r}}
+\newcommand{\rms}{{\rm s}}
+\newcommand{\rmt}{{\rm t}}
+\newcommand{\rmu}{{\rm u}}
+\newcommand{\rmv}{{\rm v}}
+\newcommand{\rmw}{{\rm w}}
+\newcommand{\rmx}{{\rm x}}
+\newcommand{\rmy}{{\rm y}}
+\newcommand{\rmz}{{\rm z}}
+%Ã•Ã½ÃŒÃ¥Â´Ã³Ã?Â´
+\newcommand{\rmA}{{\rm A}}
+\newcommand{\rmB}{{\rm B}}
+\newcommand{\rmC}{{\rm C}}
+\newcommand{\rmD}{{\rm D}}
+\newcommand{\rmE}{{\rm E}}
+\newcommand{\rmF}{{\rm F}}
+\newcommand{\rmG}{{\rm G}}
+\newcommand{\rmH}{{\rm H}}
+\newcommand{\rmI}{{\rm I}}
+\newcommand{\rmJ}{{\rm J}}
+\newcommand{\rmK}{{\rm K}}
+\newcommand{\rmL}{{\rm L}}
+\newcommand{\rmM}{{\rm M}}
+\newcommand{\rmN}{{\rm N}}
+\newcommand{\rmO}{{\rm O}}
+\newcommand{\rmP}{{\rm P}}
+\newcommand{\rmQ}{{\rm Q}}
+\newcommand{\rmR}{{\rm R}}
+\newcommand{\rmS}{{\rm S}}
+\newcommand{\rmT}{{\rm T}}
+\newcommand{\rmU}{{\rm U}}
+\newcommand{\rmV}{{\rm V}}
+\newcommand{\rmW}{{\rm W}}
+\newcommand{\rmX}{{\rm X}}
+\newcommand{\rmY}{{\rm Y}}
+\newcommand{\rmZ}{{\rm Z}}
+%--ÂºÃšÃ?Â±ÃŒÃ¥Ã?Â¡Ã?Â´-----------------------------------------------------------------
+\def\bfa{\mbox{\boldmath$a$}}
+\def\bfb{\mbox{\boldmath$b$}}
+\def\bfc{\mbox{\boldmath$c$}}
+\def\bfd{\mbox{\boldmath$d$}}
+\def\bfe{\mbox{\boldmath$e$}}
+\def\bff{\mbox{\boldmath$f$}}
+\def\bfg{\mbox{\boldmath$g$}}
+\def\bfh{\mbox{\boldmath$h$}}
+\def\bfi{\mbox{\boldmath$i$}}
+\def\bfj{\mbox{\boldmath$j$}}
+\def\bfk{\mbox{\boldmath$k$}}
+\def\bfl{\mbox{\boldmath$l$}}
+\def\bfm{\mbox{\boldmath$m$}}
+\def\bfn{\mbox{\boldmath$n$}}
+\def\bfo{\mbox{\boldmath$o$}}
+\def\bfp{\mbox{\boldmath$p$}}
+\def\bfq{\mbox{\boldmath$q$}}
+\def\bfr{\mbox{\boldmath$r$}}
+\def\bfs{\mbox{\boldmath$s$}}
+\def\bft{\mbox{\boldmath$t$}}
+\def\bfu{\mbox{\boldmath$u$}}
+\def\bfv{\mbox{\boldmath$v$}}
+\def\bfw{\mbox{\boldmath$w$}}
+\def\bfx{\mbox{\boldmath$x$}}
+\def\bfy{\mbox{\boldmath$y$}}
+\def\bfz{\mbox{\boldmath$z$}}
+%ÂºÃšÃ?Â±ÃŒÃ¥Â´Ã³Ã?Â´
+\def\bfA{\mbox{\boldmath$A$}}
+\def\bfB{\mbox{\boldmath$B$}}
+\def\bfC{\mbox{\boldmath$C$}}
+\def\bfD{\mbox{\boldmath$D$}}
+\def\bfE{\mbox{\boldmath$E$}}
+\def\bfF{\mbox{\boldmath$F$}}
+\def\bfG{\mbox{\boldmath$G$}}
+\def\bfH{\mbox{\boldmath$H$}}
+\def\bfI{\mbox{\boldmath$I$}}
+\def\bfJ{\mbox{\boldmath$J$}}
+\def\bfK{\mbox{\boldmath$K$}}
+\def\bfL{\mbox{\boldmath$L$}}
+\def\bfM{\mbox{\boldmath$M$}}
+\def\bfN{\mbox{\boldmath$N$}}
+\def\bfO{\mbox{\boldmath$O$}}
+\def\bfP{\mbox{\boldmath$P$}}
+\def\bfQ{\mbox{\boldmath$Q$}}
+\def\bfR{\mbox{\boldmath$R$}}
+\def\bfS{\mbox{\boldmath$S$}}
+\def\bfT{\mbox{\boldmath$T$}}
+\def\bfU{\mbox{\boldmath$U$}}
+\def\bfV{\mbox{\boldmath$V$}}
+\def\bfW{\mbox{\boldmath$W$}}
+\def\bfX{\mbox{\boldmath$X$}}
+\def\bfY{\mbox{\boldmath$Y$}}
+\def\bfZ{\mbox{\boldmath$Z$}}
+
+%\def\bfE{\mbox{\boldmath$E$}}
+%\def\bfG{\mbox{\boldmath$G$}}
+
+%--ÂºÃšÃ?Â±ÃŒÃ¥Ã?Â£Ã€Â°Â´Ã³Ã?Â´----------------------------------
+\def\bfDelta{\mbox{\boldmath$\Delta$}}
+\def\bfGamma{\mbox{\boldmath$\Gamma$}}
+\def\bfTheta{\mbox{\boldmath$\Theta$}}
+\def\bfLambda{\mbox{\boldmath$\Lambda$}}
+\def\bfXi{\mbox{\boldmath$\Xi$}}
+\def\bfPi{\mbox{\boldmath$\Pi$}}
+\def\bfSigma{\mbox{\boldmath$\Sigma$}}
+\def\bfUpsilon{\mbox{\boldmath$\Upsilon$}}
+\def\bfPhi{\mbox{\boldmath$\Phi$}}
+\def\bfPsi{\mbox{\boldmath$\Psi$}}
+\def\bfOmega{\mbox{\boldmath$\Omega$}}
+%ÂºÃšÃ?Â±ÃŒÃ¥Ã?Â£Ã€Â°Ã?Â¡Ã?Â´
+\def\bfalpha{\mbox{\boldmath${\alpha}$}}
+\def\bfbeta{\mbox{\boldmath${\beta}$}}
+\def\bfgamma{\mbox{\boldmath${\gamma}$}}
+\def\bfdelta{\mbox{\boldmath${\delta}$}}
+\def\bfepsilon{\mbox{\boldmath${\epsilon}$}}
+\def\bfvarepsilon{\mbox{\boldmath${\varepsilon}$}}
+\def\bfzeta{\mbox{\boldmath${\zeta}$}}
+\def\bfeta{\mbox{\boldmath${\eta}$}}         % note the variation
+\def\bftheta{\mbox{\boldmath${\theta}$}}
+\def\bfiota{\mbox{\boldmath${\iota}$}}
+\def\bfkappa{\mbox{\boldmath${\kappa}$}}
+\def\bflambda{\mbox{\boldmath${\lambda}$}}
+\def\bfmu{\mbox{\boldmath${\mu}$}}
+\def\bfnu{ {\bf\nu}}
+\def\bfxi{\mbox{\boldmath${\xi}$}}
+\def\bfomicron{\mbox{\boldmath ${\omicron}$}}
+\def\bfpi{\mbox{\boldmath${\pi}$}}
+\def\bfrho{\mbox{\boldmath${\rho}$}}
+\def\bfsigma{\mbox{\boldmath${\sigma}$}}
+\def\bftau{\mbox{\boldmath${\tau}$}}
+\def\bfphi{\mbox{\boldmath${\phi}$}}
+\def\bfchi{\mbox{\boldmath${\chi}$}}
+\def\bfupsilon{\mbox{\boldmath${\upsilon}$}}
+\def\bfpsi{\mbox{\boldmath${\psi}$}}
+\def\bfomega{\mbox{\boldmath${\omega}$}}
+%
+\def\bfvaralpha{\mbox{\boldmath${\varalpha}$}}
+\def\bfvarbeta{\mbox{\boldmath${\varbeta}$}}
+\def\bfvargamma{\mbox{\boldmath${\vargamma}$}}
+\def\bfvardelta{\mbox{\boldmath${\vardelta}$}}
+\def\bfvarepsilon{\mbox{\boldmath${\varepsilon}$}}
+\def\bfvarzeta{\mbox{\boldmath${\varzeta}$}}
+\def\bfvareta{\mbox{\boldmath${\vareta}$}}
+\def\bfvartheta{\mbox{\boldmath${\vartheta}$}}
+\def\bfvariota{\mbox{\boldmath${\variota}$}}
+\def\bfvarkappa{\mbox{\boldmath${\varkappa}$}}
+\def\bfvarlambda{\mbox{\boldmath${\varlambda}$}}
+\def\bfvarmu{\mbox{\boldmath${\varmu}$}}
+\def\bfvarnu{\mbox{\boldmath${\varnu}$}}
+\def\bfvarxi{\mbox{\boldmath${\varxi}$}}
+\def\bfvaromicron{\mbox{\boldmath ${\varomicron}$}}
+\def\bfvarpi{\mbox{\boldmath${\pi}$}}
+\def\bfvarrho{\mbox{\boldmath${\varrho}$}}
+\def\bfvarsigma{\mbox{\boldmath${\varsigma}$}}
+\def\bfvartau{\mbox{\boldmath${\vartau}$}}
+\def\bfvarphi{\mbox{\boldmath${\varphi}$}}
+\def\bfvarchi{\mbox{\boldmath${\varchi}$}}
+\def\bfvarupsilon{\mbox{\boldmath${\varupsilon}$}}
+\def\bfvarpsi{\mbox{\boldmath${\varpsi}$}}
+\def\bfvaromega{\mbox{\boldmath${\varomega}$}}
+
+
+%--Ã•Ã½ÂºÃšÃŒÃ¥Ã?Â¡Ã?Â´------------------------------------------------------------
+\def\rbfa{{\bf a}}
+\def\rbfb{{\bf b}}
+\def\rbfc{{\bf c}}
+\def\rbfd{{\bf d}}
+\def\rbfe{{\bf e}}
+\def\rbff{{\bf f}}
+\def\rbfg{{\bf g}}
+\def\rbfh{{\bf h}}
+\def\rbfi{{\bf i}}
+\def\rbfj{{\bf j}}
+\def\rbfk{{\bf k}}
+\def\rbfl{{\bf l}}
+\def\rbfm{{\bf m}}
+\def\rbfn{{\bf n}}
+\def\rbfo{{\bf o}}
+\def\rbfp{{\bf p}}
+\def\rbfq{{\bf q}}
+\def\rbfr{{\bf r}}
+\def\rbfs{{\bf s}}
+\def\rbft{{\bf t}}
+\def\rbfu{{\bf u}}
+\def\rbfv{{\bf v}}
+\def\rbfw{{\bf w}}
+\def\rbfx{{\bf x}}
+\def\rbfy{{\bf y}}
+\def\rbfz{{\bf z}}
+%Ã•Ã½ÂºÃšÃŒÃ¥Â´Ã³Ã?Â´
+\def\rbfA{{\bf A}}
+\def\rbfB{{\bf B}}
+\def\rbfC{{\bf C}}
+\def\rbfD{{\bf D}}
+\def\rbfE{{\bf E}}
+\def\rbfF{{\bf F}}
+\def\rbfG{{\bf G}}
+\def\rbfH{{\bf H}}
+\def\rbfI{{\bf I}}
+\def\rbfJ{{\bf J}}
+\def\rbfK{{\bf K}}
+\def\rbfL{{\bf L}}
+\def\rbfM{{\bf M}}
+\def\rbfN{{\bf N}}
+\def\rbfO{{\bf O}}
+\def\rbfP{{\bf P}}
+\def\rbfQ{{\bf Q}}
+\def\rbfR{{\bf R}}
+\def\rbfS{{\bf S}}
+\def\rbfT{{\bf T}}
+\def\rbfU{{\bf U}}
+\def\rbfV{{\bf V}}
+\def\rbfW{{\bf W}}
+\def\rbfX{{\bf X}}
+\def\rbfY{{\bf Y}}
+\def\rbfZ{{\bf Z}}
+%Ã•Ã½ÂºÃšÃŒÃ¥Ã?Â£Ã€Â°Â´Ã³Ã?Â´
+\def\rbfDelta{{\bf \Delta}}
+\def\rbfGamma{{\bf \Gamma}}
+\def\rbfTheta{{\bf \Theta}}
+\def\rbfLambda{{\bf \Lambda}}
+\def\rbfXi{{\bf \Xi}}
+\def\rbfPi{{\bf \Pi}}
+\def\rbfSigma{{\bf \Sigma}}
+\def\rbfUpsilon{{\bf \Upsilon}}
+\def\rbfPhi{{\bf \Phi}}
+\def\rbfPsi{{\bf \Psi}}
+\def\rbfOmega{{\bf \Omega}}
+%Ã•Ã½ÂºÃšÃŒÃ¥Ã?Â£Ã€Â°Ã?Â¡Ã?Â´
+\def\rbfalpha{\mbox{\boldmath${\alpha}$}}
+\def\rbfbeta{\mbox{\boldmath${\beta}$}}
+\def\rbfgamma{\mbox{\boldmath${\gamma}$}}
+\def\rbfdelta{\mbox{\boldmath${\delta}$}}
+\def\rbfepsilon{\mbox{\boldmath${\epsilon}$}}
+\def\rbfvarepsilon{\mbox{\boldmath${\varepsilon}$}}
+\def\rbfzeta{\mbox{\boldmath${\zeta}$}}
+\def\rbfeta{\mbox{\boldmath${\eta}$}}         % note the variation
+\def\rbftheta{\mbox{\boldmath${\theta}$}}
+\def\rbfiota{\mbox{\boldmath${\iota}$}}
+\def\rbfkappa{\mbox{\boldmath${\kappa}$}}
+\def\rbflambda{\mbox{\boldmath${\lambda}$}}
+\def\rbfmu{\mbox{\boldmath${\mu}$}}
+\def\rbfnu{ {\bf\nu}}
+\def\rbfxi{\mbox{\boldmath${\xi}$}}
+\def\rbfomicron{\mbox{\boldmath ${\omicron}$}}
+\def\rbfpi{\mbox{\boldmath${\pi}$}}
+\def\rbfrho{\mbox{\boldmath${\rho}$}}
+\def\rbfsigma{\mbox{\boldmath${\sigma}$}}
+\def\rbftau{\mbox{\boldmath${\tau}$}}
+\def\rbfphi{\mbox{\boldmath${\phi}$}}
+\def\rbfchi{\mbox{\boldmath${\chi}$}}
+\def\rbfupsilon{\mbox{\boldmath${\upsilon}$}}
+\def\rbfpsi{\mbox{\boldmath${\psi}$}}
+\def\rbfomega{\mbox{\boldmath${\omega}$}}
+%Ã•Ã½ÂºÃšÃŒÃ¥Ã?Â£Ã€Â°Ã?Â¡Ã?Â´ var
+\def\rbfvaralpha{\mbox{\boldmath${\varalpha}$}}
+\def\rbfvarbeta{\mbox{\boldmath${\varbeta}$}}
+\def\rbfvargamma{\mbox{\boldmath${\vargamma}$}}
+\def\rbfvardelta{\mbox{\boldmath${\vardelta}$}}
+\def\rbfvarepsilon{\mbox{\boldmath${\varepsilon}$}}
+\def\rbfvarzeta{\mbox{\boldmath${\varzeta}$}}
+\def\rbfvareta{\mbox{\boldmath${\vareta}$}}
+\def\rbfvartheta{\mbox{\boldmath${\vartheta}$}}
+\def\rbfvariota{\mbox{\boldmath${\variota}$}}
+\def\rbfvarkappa{\mbox{\boldmath${\varkappa}$}}
+\def\rbfvarlambda{\mbox{\boldmath${\varlambda}$}}
+\def\rbfvarmu{\mbox{\boldmath${\varmu}$}}
+\def\rbfvarnu{\mbox{\boldmath${\varnu}$}}
+\def\rbfvarxi{\mbox{\boldmath${\varxi}$}}
+\def\rbfvaromicron{\mbox{\boldmath ${\varomicron}$}}
+\def\rbfvarpi{\mbox{\boldmath${\pi}$}}
+\def\rbfvarrho{\mbox{\boldmath${\varrho}$}}
+\def\rbfvarsigma{\mbox{\boldmath${\varsigma}$}}
+\def\rbfvartau{\mbox{\boldmath${\vartau}$}}
+\def\rbfvarphi{\mbox{\boldmath${\varphi}$}}
+\def\rbfvarchi{\mbox{\boldmath${\varchi}$}}
+\def\rbfvarupsilon{\mbox{\boldmath${\varupsilon}$}}
+\def\rbfvarpsi{\mbox{\boldmath${\varpsi}$}}
+\def\rbfvaromega{\mbox{\boldmath${\varomega}$}}
+%----------------------------------------------
+
+
+
+
+% 5. shortened caligraphic symbolics
+\begin{document}
+Consider a continuous-time system with the following state space
+representation
+\begin{equation}
+\label{re_01a}
+ P:\ \ \ \  \left\{\begin{array}{ccl} \dot{x}(t)&=&A x(t)+Bu(t),\\
+    y(t) &=& Cx(t)+D u(t),\end{array}\right.
+\end{equation}
+where $x(t)\in\R^n$, $u(t)\in\R^r$ and $y(t)\in\R^m$ are the state
+vector, input vector and output vector of the system,
+respectively; $A\in\R^{n\times n}$, $B\in\R^{n\times r}$,
+$C\in\R^{m\times n}$ and $D\in\R^{m\times r}$ are the constant
+real or complex matrices.
+
+Suppose that the sampling interval is $\tau$. By using the step
+invariance transform or the zero-order hold (ZOH), i.e.,
+$u(t)=u(k\tau),\ k\tau\leq t<(k+1)\tau$, discretizing the system
+in (\ref{re_01a}) gives a discrete-time model,
+\begin{equation}\label{re_01c}
+ P_\tau:\ \ \ \ \left\{\begin{array}{ccl}x(k\tau+\tau)&=&G_\tau x(k\tau) +F_\tau u(k\tau),\\
+              y(k\tau) &=& C x(k\tau)+Du(k\tau),\ k=0, 1, 2, \cdots\end{array}\right.
+\end{equation}
+where $x(k\tau)=x(t)\left|_{t=k\tau}\right.$,
+$y(k\tau)=y(t)\left|_{t=k\tau}\right.$, and
+\begin{equation}\label{re_01d}
+ G_\tau:=\rme^{A \tau}, \ F_\tau:=\int^{\tau}_{0}\rme^{A t}\rmd t\ B.
+\end{equation}
+%%%%%
+%%%%%
+\end{document}

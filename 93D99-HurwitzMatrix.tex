@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HurwitzMatrix}
+\pmcreated{2013-03-22 14:02:45}
+\pmmodified{2013-03-22 14:02:45}
+\pmowner{lha}{3057}
+\pmmodifier{lha}{3057}
+\pmtitle{Hurwitz matrix}
+\pmrecord{4}{35395}
+\pmprivacy{1}
+\pmauthor{lha}{3057}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{93D99}
+\pmdefines{Hurwitz transfer function}
+\pmdefines{stability matrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A square matrix $A$ is called a {\em Hurwitz matrix} if all eigenvalues of $A$ have strictly negative real part, $Re[\lambda_i] < 0$; $A$ is also called a {\em stability matrix}, because the feedback system
+$$
+    \dot x = A x
+$$
+is stable.
+
+If $G(s)$ is a (matrix-valued) transfer function, then $G$ is called Hurwitz if the poles of all elements of $G$  have negative real part.  Note that it is not necessary that $G(s)$, for a specific argument $s$, be a Hurwitz matrix --- it need not even be square.  The c{}onnection is that if $A$ is a Hurwitz matrix, then the dynamical system
+\begin{eqnarray*}
+  \dot x(t) &=& A x(t) + B u(t) \\
+  y(t) &=& C x(t) + D u(t)
+\end{eqnarray*}
+has a Hurwitz transfer function.
+
+Reference:  Hassan K. Khalil, {\it Nonlinear Systems}, Prentice Hall, 2002
+%%%%%
+%%%%%
+\end{document}

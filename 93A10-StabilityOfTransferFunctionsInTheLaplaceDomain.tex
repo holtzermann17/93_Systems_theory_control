@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StabilityOfTransferFunctionsInTheLaplaceDomain}
+\pmcreated{2013-03-22 14:22:41}
+\pmmodified{2013-03-22 14:22:41}
+\pmowner{rrogers}{21140}
+\pmmodifier{rrogers}{21140}
+\pmtitle{stability of transfer functions in the Laplace domain}
+\pmrecord{11}{35870}
+\pmprivacy{1}
+\pmauthor{rrogers}{21140}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{93A10}
+%\pmkeywords{BIBO stable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The following describes SISO (single input single output) system descriptions.
+More complex systems require a more sophisticated analysis.
+
+For a general transfer function, $H(s)$, in Laplace domain, we have
+
+\begin{align}
+  \label{eq:tf}
+   H(s) &= \frac{\prod_{i=0}^Z (s - z_i)}{\prod_{i=0}^P (s - p_i)}
+\end{align}
+
+The conclusions below can all be derived and understood by expansion of $H(s)$ in 
+terms of partial fractions, and then doing a inverse Laplace 
+transform fraction by fraction.
+
+$z_i$ denotes the zeros and $p_i$ denotes the poles of the
+linear time invariant system (LTI).  Stability of the system $H(s)$ is
+characterized by the location of the poles in the complex s-plane.  
+There are many definitions
+of stability in the control system literature, the most common one
+used (for transfer functions) is the bounded-input-bounded-output
+stability (BIBO), which states that for a BIBO stable system, for any
+bounded input, or finite amplitude input, the output of the system
+will also be bounded. 
+
+For example, a typical second order system such as the
+mass-spring-dashpot system has the following transfer function,
+
+\begin{align}
+  \label{eq:2ndOrderSys}
+  H(p) &= \frac{\omega^2}{p^2 + 2\zeta \omega p + \omega^2}
+\end{align}
+
+with a pair of complex poles at $p = -\zeta \omega \pm \omega
+\sqrt{\zeta^2 -1}$.  In common control system literature, $\zeta$ is
+usually denoted as the \emph{damping ratio} and $\omega$ is denoted as
+the \emph{natural frequency} of the system.  In the case of the
+mass-spring-dashpot system, we can tell that the oscillation of the
+mass attached to a spring should be a function of the weight of the
+mass and the stiffness of the spring, hence in the literature we have
+$\omega = \sqrt{\frac{K}{M}}$, where $K$ is the spring constant and
+$M$ is the weight of the mass.  From the same logic, the amount time
+for the mass to stop oscillating should be a function of the spring
+stiffness and the characteristics of the dashpot, so we have $\zeta =
+\frac{D \omega}{2 K}$, where $D$ is the dashpot constant.  
+
+To determine is the system $H(p)$ BIBO stable, the simplest solution
+is to scrutinize the time domain solution of ~\ref{eq:2ndOrderSys} via
+inverse Laplace transform, and such discussion can easily be found in
+common control system related text books and online lecture notes.
+However, such approach tells nothing about the \emph{physical nature}
+of the dynamic system, so here I will try to establish relationship
+between the location of the poles and the stability of the system.
+Here I first state that the system in ~\ref{eq:2ndOrderSys},
+specifically the mass-spring-dashpot system, is stable,
+since it is physically impossible for the system to produce an output
+increasing in amplitude forever as time goes to infinity.
+
+First let's consider an ideal mass-spring system.  If we push the mass
+once (impulse response), the mass will oscillate
+forever with the same amplitude and frequency, since there are no
+dashpot to dampen the motion.  In this case, $D=0 \rightarrow \zeta
+=0$, which the pair of complex poles of the system will be located on
+the imaginary axis of the complex s-plane, and the stronger the spring
+($K$ is large) the further away the poles from the origin. So the
+imaginary part of the poles $img(p_i)$ dominates the oscillatory nature of the
+system. Now let's assume that we have a relatively weak spring compare
+to the dashpot that we are going to add to the system, so the real
+part of the poles $real(p_i)$ will be dominating.  If we push the mass
+the same way as before, now we can expect the mass to oscillate for
+sometime then come to a rest, depending on the strength of the
+dashpot.  The stronger the dashpot, the further away the poles from
+the origin along the real axis on the s-plane.  We have almost covered
+the whole left-hand side of the s-plane, and so far we have the following
+observations.
+
+\begin{itemize}
+  \item The imaginary part of complex poles correspond to oscillatory energy storage
+    mechanisms. Note if the original differential equation has real coefficients, 
+    the complex poles are always in complex conjugate pairs .  As a result
+    these can always be represented by sine and cos terms in the time domain.
+  \item The real parts of poles govern the decay rate of responses to 
+    stimulations; with negative values corresponding to decaying terms, and positive
+    parts to growth terms (which are not stable).
+  \item The ratio between the real and imaginary parts of the poles govern the shape of the
+   response.  In particular ratios less than one hide the visible part of the oscillatory terms in the
+   time domain.
+  \item Poles that have neither real or imaginary parts, i.e. at the origin, 
+    correspond to successive integrations in the time domain.  One integration for 
+    each pole.  Since these have an unbounded output for a step input, systems like these are 
+    not BIBO; but are common.
+\end{itemize}
+
+For a system consisted of poles with imaginary parts only, $p_i = \pm
+j \omega$, it is usually referred to as a \em{marginally stable
+  system}. Notice that the real part of the poles for system
+~\ref{eq:2ndOrderSys} are always negative, since both $\zeta$ and
+$\omega$ are always positive. If a stable system has negative poles
+(real or complex), unstable system must has positives poles, in the
+right-hand side of the s-plane.  This can easily be visualize if we
+place a amplifier (with $-\zeta$) instead of a dashpot in the system. 
+
+%%%%%
+%%%%%
+\end{document}
