@@ -1,0 +1,224 @@
+<!DOCTYPE html><html>
+<head>
+<title>control system</title>
+<!--Generated on Sat Feb 10 13:40:37 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">control system</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The sole objective of control system is to generate feasible inputs
+to the plant (e.g. dynamic systems) such that it will operate as it
+intended to under a wide range of operating conditions.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Examples of control systems: Cruise control, auto pilot, rice cooker.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">For a general finite dimensional dynamic system in its ODE form,</p>
+</div>
+<div id="p4" class="ltx_para">
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle\dot{x}" display="inline"><mover accent="true"><mi>x</mi><mo>˙</mo></mover></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E1.m2" class="ltx_Math" alttext="\displaystyle=f(x(t),t)+g(x(t),u(t),t)," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle y" display="inline"><mi>y</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=h(x(t),t)," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">where <math id="p5.m1" class="ltx_Math" alttext="x\in\mathbb{R}^{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math> is the state, <math id="p5.m2" class="ltx_Math" alttext="y\in\mathbb{R}^{l}" display="inline"><mrow><mi>y</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>l</mi></msup></mrow></math> is the
+output and <math id="p5.m3" class="ltx_Math" alttext="u\in\mathbb{R}^{m}" display="inline"><mrow><mi>u</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow></math> is the control input of the system.
+In the control literature, equation <a href="#S0.E1" title="(1) ‣ control system" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> is general referred
+as the plant, where the function <math id="p5.m4" class="ltx_Math" alttext="f:\mathbb{R}^{n}\times\mathbb{R}\rightarrow\mathbb{R}^{n}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>×</mo><mi>ℝ</mi></mrow><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> governs the system dynamics, <math id="p5.m5" class="ltx_Math" alttext="g:\mathbb{R}^{m}\times\mathbb{R}^{n}\times\mathbb{R}\rightarrow\mathbb{R}^{n}" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mrow><msup><mi>ℝ</mi><mi>m</mi></msup><mo>×</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>×</mo><mi>ℝ</mi></mrow><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> determines how the input (control signals)
+influence the state <math id="p5.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> via <span class="ltx_text ltx_font_italic">actuators</span> (e.g. gas turbine) and
+<math id="p5.m7" class="ltx_Math" alttext="h:\mathbb{R}^{n}\times\mathbb{R}\rightarrow\mathbb{R}^{l}" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>×</mo><mi>ℝ</mi></mrow><mo>→</mo><msup><mi>ℝ</mi><mi>l</mi></msup></mrow></mrow></math>
+determines how the state generates the output signal. If <math id="p5.m8" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is equal to <math id="p5.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, the plant is
+<span class="ltx_text ltx_font_italic">fully actuated</span>. If <math id="p5.m10" class="ltx_Math" alttext="m&lt;n" display="inline"><mrow><mi>m</mi><mo>&lt;</mo><mi>n</mi></mrow></math> then the plant is <span class="ltx_text ltx_font_italic">under actuated</span>
+and otherwise the plant is <span class="ltx_text ltx_font_italic">over actuated</span>. For a plant that is not
+explicitly dependent in time <math id="p5.m11" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, such system is called a
+<span class="ltx_text ltx_font_italic">Autonomous</span> system. The main
+differece between a control system and a general dynamic system is
+the additional signal <math id="p5.m12" class="ltx_Math" alttext="u(t)" display="inline"><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">For example, to control an airplane, the control system has to control
+the <span class="ltx_text ltx_font_italic">thrust</span>, <span class="ltx_text ltx_font_italic">flaps</span>, <span class="ltx_text ltx_font_italic">aileron</span> and <span class="ltx_text ltx_font_italic">rudder</span>, which they
+are the control signals of the system <math id="p6.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>. Those control input
+influence the system state <math id="p6.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> such as <span class="ltx_text ltx_font_italic">speed</span> (with thrust),
+<span class="ltx_text ltx_font_italic">attitude</span> and <span class="ltx_text ltx_font_italic">orientation</span> (with flaps, aileron and rudder).
+To physically alter the state of the airplane, actuators such as
+gas turbines are needed, which are controlled by the control signals <math id="p6.m3" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">The control signal <math id="p7.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> can be generated in a <span class="ltx_text ltx_font_italic">closed-loop</span> fashion
+or <span class="ltx_text ltx_font_italic">open-loop</span> fashion. An open-loop control system generates <math id="p7.m2" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>
+with the user, or operator supplied reference state <math id="p7.m3" class="ltx_Math" alttext="x_{d}" display="inline"><msub><mi>x</mi><mi>d</mi></msub></math> or output
+<math id="p7.m4" class="ltx_Math" alttext="y_{d}" display="inline"><msub><mi>y</mi><mi>d</mi></msub></math> only; meanwhile closed-loop control system uses both reference
+and <span class="ltx_text ltx_font_italic">feedback</span> signals that are usually measured from
+<span class="ltx_text ltx_font_italic">sensors</span>. In the airplane attitude control example, the desired
+attitude is usually represented in roll-pitch-yaw angle
+representation, and these signals are measurable by attaching
+sensors to the flaps, aileron and rudder. In engineering
+practice, only closed-loop control systems should be used, since
+open-loop systems are not <span class="ltx_text ltx_font_italic">robust</span> against uncertainties, modeling
+errors and measurement errors.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">If a closed-loop control system is based on state feedback, such
+contol system is called a <span class="ltx_text ltx_font_italic">state-feedback</span> control system. By the
+same token, a <span class="ltx_text ltx_font_italic">output-feedback</span> control system is based on output
+feedback only. Notice that output signals are available for feedback
+by definition, however in reality not all the states are mesurable. If
+a state-feedback control system with all the states available for
+feedback, it is called a <span class="ltx_text ltx_font_italic">full-state feedback</span> system and otherwise
+is call <span class="ltx_text ltx_font_italic">partial-state feedback</span> system, which usually requires a <span class="ltx_text ltx_font_italic">state
+observer</span> (e.g. Kalman filter) to estimate the unavailable states.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">To illustrate the simple concept of control systems, we will use a
+simple example. A truck driver is required to travel 1000 Km in 10
+hours. To relive the stress on the driver’s heel, he has placed a stick
+to the gas paddle so the car travels at <math id="p9.m1" class="ltx_Math" alttext="\,\mathrm{100Km/h}" display="inline"><mrow><mrow><mn> 100</mn><mo>⁢</mo><mi>Km</mi></mrow><mo>/</mo><mi mathvariant="normal">h</mi></mrow></math>. Under perfect
+conditions, the driver will reach the destination in the allocated
+time. However, a certain section of the road is up-hill, so the truck
+slowed down by a considerable amount and will not arrive it’s
+destination in time. To remedy this problem, the driver ’implemented’
+a simple solution using the speed-o-meter such that the gas paddle position
+<math id="p9.m2" class="ltx_Math" alttext="p_{set}" display="inline"><msub><mi>p</mi><mrow><mi>s</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>t</mi></mrow></msub></math> of the truck is now depends on the current speed
+<math id="p9.m3" class="ltx_Math" alttext="v_{current}" display="inline"><msub><mi>v</mi><mrow><mi>c</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></msub></math> of the truck, <math id="p9.m4" class="ltx_Math" alttext="p_{set}=-K(v_{current}-\,\mathrm{100Km/h})" display="inline"><mrow><msub><mi>p</mi><mrow><mi>s</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo>=</mo><mrow><mo>-</mo><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>v</mi><mrow><mi>c</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo>-</mo><mrow><mrow><mn> 100</mn><mo>⁢</mo><mi>Km</mi></mrow><mo>/</mo><mi mathvariant="normal">h</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>,
+where <math id="p9.m5" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is just an adjustable parameter. So if the truck is running
+too slow (e.g. up-hill), <math id="p9.m6" class="ltx_Math" alttext="p_{set}" display="inline"><msub><mi>p</mi><mrow><mi>s</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>t</mi></mrow></msub></math> will be positive (more gas to the
+engine) hence speed will increase to maintain the desired speed, so
+vice-versa for the down-hill case.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">In this example, we have outlined all the major components of a
+typical control system:</p>
+</div>
+<div id="p11" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Actuator: engine,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Sensor: speed-o-meter,</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Plant: truck,</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Control input: gas paddle,</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Control objective: 1000 Km in 10 hrs,</p>
+</div>
+</li>
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p">Control law: <math id="I1.i6.p1.m1" class="ltx_Math" alttext="p_{set}=-K(v_{current}-100Km/h)" display="inline"><mrow><msub><mi>p</mi><mrow><mi>s</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo>=</mo><mrow><mo>-</mo><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>v</mi><mrow><mi>c</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo>-</mo><mrow><mrow><mn>100</mn><mo>⁢</mo><mi>K</mi><mo>⁢</mo><mi>m</mi></mrow><mo>/</mo><mi>h</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>,
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">The science aspect of control systems is the study of
+design, synthesis and analysis of control systems using mathematical
+concepts, and the engineering aspect of controls systems is to
+implement, construct and adjust the control system according to
+real-life situation and limitations.</p>
+</div>
+<div id="p13" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">control system</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ControlSystem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:22:59</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:22:59</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ppirrip (5555)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ppirrip (5555)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ppirrip (5555)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 93A10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">SystemDefinitions</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:40:37 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

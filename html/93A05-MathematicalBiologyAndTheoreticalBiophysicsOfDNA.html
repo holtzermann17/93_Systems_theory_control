@@ -1,0 +1,629 @@
+<!DOCTYPE html><html>
+<head>
+<title>mathematical biology and theoretical biophysics of DNA</title>
+<!--Generated on Sat Feb 10 13:40:35 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">mathematical biology and theoretical biophysics of DNA</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Mathematical biology</em> (also known as <em class="ltx_emph ltx_font_italic">theoretical biology</em>) is the study of biological
+principles and laws, together with the formulation of mathematical models– and also the logical and mathematical representation <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite>– of <em class="ltx_emph ltx_font_italic">complex biological systems</em> at all levels of biological organization, from the quantum/molecular level to the physiological, systemic and the whole organism levels.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Mathematical biophysics</h2>
+
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1 </span>History</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">Mathematical biophysics has dominated for over half a century developments in mathematical biology
+as theoretical or mathematical physicists have expanded their interests to applying mathematical and
+physical concepts to studying living organisms and in repeated attempts to ‘define life itself’ <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>, <a href="#bib.bib28" title="" class="ltx_ref">28</a>]</cite>.</p>
+</div>
+<div id="S2.SS1.p2" class="ltx_para">
+<p class="ltx_p">A prominent early example was the famous Erwin <math id="S2.SS1.p2.m1" class="ltx_Math" alttext='Schr\"{o}dinger' display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mtext>ö</mtext><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>r</mi></mrow></math> ’s book (published in 1945 in Cambridge, UK)
+entitled suggestively “What is Life?”, and that was perhaps too critically re-evaluated a decade ago by Robert Rosen.
+This interesting and concise book appears to have inspired a decade later the discovery of the
+double helical, molecular structures of A- and B- DNA crystals/paracrystals (<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib26" title="" class="ltx_ref">26</a>, <a href="#bib.bib9" title="" class="ltx_ref">9</a>, <a href="#bib.bib12" title="" class="ltx_ref">12</a>, <a href="#bib.bib25" title="" class="ltx_ref">25</a>]</cite>) by Maurice Wilkins, Rosalind Franklin, Francis Crick and James D. Watson, with the first two (bio)physical chemists working at that time with X-ray Diffraction of DNA crystals at
+<span class="ltx_text ltx_font_typewriter">http://www.kcl.ac.uk/schools/biohealth/graduate/taught/molbiophysics/</span>King’s College in London, (see also the websites about
+<span class="ltx_text ltx_font_typewriter">http://www.kcl.ac.uk/college/history/people/franklin_wilkins.html</span>Rosalind Franklin and Maurice Wilkins), and the last two researchers working at
+<span class="ltx_text ltx_font_typewriter">http://www.phy.cam.ac.uk/</span>The Cavendish Laboratory of the University of Cambridge(UK), (see also
+<span class="ltx_text ltx_font_typewriter">http://www.admin.cam.ac.uk/news/dp/2004072903</span>related news at, and also the
+<span class="ltx_text ltx_font_typewriter">http://www.pom.cam.ac.uk/initiative.html</span>new Biology and Physics of Medicine Laboratory at
+<span class="ltx_text ltx_font_typewriter">http://www.pom.cam.ac.uk/initiative.html</span>The Cavendish). With the notable exception of Rosalind Franklin and Robert Rosen, the other three mathematical and experimental biophysicists became
+<span class="ltx_text ltx_font_typewriter">http://nobelprize.org/nobel_prizes/medicine/laureates/1962/</span>Nobel Laureates in Physiology and Medicine.</p>
+</div>
+<div id="S2.SS1.p3" class="ltx_para">
+<p class="ltx_p">Notably DNA configurations <em class="ltx_emph ltx_font_italic">in vivo</em> include a significant amount of dynamic, partial disorder and may be defined at best as <em class="ltx_emph ltx_font_italic">paracrystals</em> (<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib26" title="" class="ltx_ref">26</a>, <a href="#bib.bib9" title="" class="ltx_ref">9</a>, <a href="#bib.bib12" title="" class="ltx_ref">12</a>]</cite>), a fact which has important consequences for functional biology and <em class="ltx_emph ltx_font_italic">in vivo</em> molecular genetics. Moreover, other structures (such as Z-DNA) were discovered in certain organisms, and other configurations were found under physiological conditions (see, for example, the excellent, DNA structure representations rendered by computers on pp. 852-854 in Voet and Voet, 1995 <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib27" title="" class="ltx_ref">27</a>]</cite>, as well as a recent update review <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib25" title="" class="ltx_ref">25</a>]</cite> and earlier generalizations <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib14" title="" class="ltx_ref">14</a>, <a href="#bib.bib15" title="" class="ltx_ref">15</a>]</cite>), such as the <span class="ltx_text ltx_font_typewriter">http://www.phy.cam.ac.uk/research/bss/molbiophysics.php</span>DNA G-quadruplexes that can control gene transcription and translation
+- especially in cancers.</p>
+</div>
+<div id="S2.SS1.p4" class="ltx_para">
+<p class="ltx_p">Erwin <math id="S2.SS1.p4.m1" class="ltx_Math" alttext='Schr\"{o}dinger' display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mtext>ö</mtext><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>r</mi></mrow></math>’s fundamental contribution to Quantum Mechanics preceded the others discussed in the previous paragraph by more than two decades when he formulated the fundamental equations of Quantum Mechanics which bear his name, and modestly called the operator appearing in the <math id="S2.SS1.p4.m2" class="ltx_Math" alttext='Schr\"{o}dinger' display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mtext>ö</mtext><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>r</mi></mrow></math> equations the
+“Hamiltonian operator” (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/HamiltonianOperatorOfAQuantumSystem</span>) - a term universally employed in the Theoretical and Mathematical Physics literature that now bears the name of the distinguished Irish physicist, Sir William Rowan Hamilton. Hamilton is now also considered to be one of the world’s greatest mathematicians (see for example, his introduction of the concept of <em class="ltx_emph ltx_font_italic">quaternions</em> in 1835), and he was also the first foreign Member to be elected to the US National Academy of Sciences in 1865. Subsequently, Schrödinger was awarded a Nobel Prize for his fundamental, theoretical (and mathematical) physics contribution by the Stockholm Nobel Committee, and soon thereafter in 1941 became the Director of the (Dublin) Institute for Advanced Studies (DIAS) in Ireland, instead of joining Albert Einstein on the staff at Princeton’s Institute for Advanced Studies.</p>
+</div>
+</section>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Recent developments</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Robert Rosen (1937-1998) was a prominent relational biologist who completed his PhD studies with
+Nicolas Rashevsky, the former Head of the Committee for Mathematical Biology at the
+University of Chicago, USA, with a Thesis on Relational Biology (Metabolic-Replication Systems, or
+<math id="S3.p1.m1" class="ltx_Math" alttext="(M,R)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></math>-systems). His publications (see bibliography) include an impressive number of volumes and textbooks on Theoretical Biology, Relational Biology, Anticipation, Ageing, Complex Dynamical Systems in Biology, (Bio) Chemical Morphogenesis and Quantum Genetics. He also reported in 1958 the first abstract representation of living organisms in special, small <em class="ltx_emph ltx_font_italic">categories of sets</em> called <em class="ltx_emph ltx_font_italic">categories of metabolic–replication systems</em>, or
+category of <math id="S3.p1.m2" class="ltx_Math" alttext="(M,R)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></math>-systems (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CategoryOfMRSystems3</span>).</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">To quote Robert Rosen:</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<blockquote class="ltx_quote">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">“Ironically, the idea that life requires an explanation is a relatively new one. To the ancients life simply <em class="ltx_emph ltx_font_upright">was</em>; it was a given; a first principle…”</em></p>
+</blockquote>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">One might add also that to most biologists “Life” is still a given, but something that might be ‘explained by reduction
+to genes, nucleic acids, enzymes and small biomolecules’, i.e. some sort of ordered ‘bag’ of biochemicals mostly filled
+with aqueous solutions inside selective biomembranes, etc. Robert Rosen’s viewpoint was quite different from this:
+he saw life as a <em class="ltx_emph ltx_font_italic">dynamic, relational pattern</em> in categories of metabolic-repair (open) systems characterized
+by flows–relational/material, energetic and informational processes– perhaps closer to the injunction by Heraclitus of <em class="ltx_emph ltx_font_italic">“panta rhei”-everything flows</em>, but with the very important addition that life flows in a <em class="ltx_emph ltx_font_italic">uniquely complex relational pattern</em> that is observed only in living systems, thus perhaps uniquely defining <em class="ltx_emph ltx_font_italic">Life</em> as a special, <em class="ltx_emph ltx_font_italic">super-complex process</em> (<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="" class="ltx_ref">8</a>]</cite>. Once life stops– even though the material structure is still there– the essential relational flow (related to energetic, informational as well as material) patterns are gone forever, with the possible exceptions of the ‘raising from the dead in the Egyptian myths about Osiris’ , and also in certain well-known sections of the New Testament.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Erwin Schroedinger.1945. <em class="ltx_emph ltx_font_italic">What is Life?</em>. Cambridge University Press: Cambridge (UK).
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Nicolas Rashevsky.1954, Topology and life: In search of general mathematical principles in
+biology and sociology, <em class="ltx_emph ltx_font_italic">Bull. Math. Biophys.</em> 16: 317-348.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+Nicolas Rashevsky. 1965. Models and Mathematical Principles in Biology. In: Waterman/Morowitz, <em class="ltx_emph ltx_font_italic">Theoretical and Mathematical Biology</em>, pp. 36-53.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock">
+Rosalind E. Franklin and R.G. Gosling. 1953. Evidence for 2-chain helix in crystalline structure
+of sodium deoxyribonucleate (DNA). <em class="ltx_emph ltx_font_italic">Nature</em> 177: 928-930.
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock">
+Wilkins, M.H.F. et al. 1953. Helical structure of crystalline deoxypentose nucleic acid (DNA).
+<em class="ltx_emph ltx_font_italic">Nature</em> 172: 759-762.
+
+</span>
+      </li>
+      
+<li id="bib.bib6" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">6</span>
+        
+<span class="ltx_bibblock">
+Francis H.C. Crick. 1953. Fourier transform of a coiled coil. <em class="ltx_emph ltx_font_italic">Acta Cryst</em>. 6: 685-687
+
+</span>
+      </li>
+      
+<li id="bib.bib7" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">7</span>
+        
+<span class="ltx_bibblock">
+H. R. Wilson. 1966. <em class="ltx_emph ltx_font_italic">Diffraction of X-rays by Proteins, Nucleic Acids and Viruses</em>.
+London: Arnold.
+
+</span>
+      </li>
+      
+<li id="bib.bib8" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">8</span>
+        
+<span class="ltx_bibblock">
+I. C. Baianu, J. F. Glazebrook, R. Brown and G. Georgescu.: Complex Nonlinear Biodynamics in Categories, Higher dimensional Algebra and Łukasiewicz-Moisil Topos: Transformation of Neural, Genetic and Neoplastic Networks, <em class="ltx_emph ltx_font_italic">Axiomathes</em>, <span class="ltx_text ltx_font_bold">16</span>: 65-122(2006).
+<span class="ltx_text ltx_font_typewriter">http://www.bangor.ac.uk/ mas010/pdffiles/Axio7complx_Printedk7_v17p223_fulltext.pdf</span>available here as PDF
+
+</span>
+      </li>
+      
+<li id="bib.bib9" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">9</span>
+        
+<span class="ltx_bibblock">
+I.C. Baianu. 1974. Ch.4 in <em class="ltx_emph ltx_font_italic">Structural Studies by X-ray Diffraction and Electron Microscopy of Erythrocite and Bacterial Plasma Membranes</em>. PhD Thesis, London: a University of London Library publication.
+
+</span>
+      </li>
+      
+<li id="bib.bib10" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">10</span>
+        
+<span class="ltx_bibblock">
+Baianu, I.C.: 1977, A Logical Model of Genetic Activities in Łukasiewicz Algebras: The Non-linear Theory. <em class="ltx_emph ltx_font_italic">Bulletin of Mathematical Biology</em>, <span class="ltx_text ltx_font_bold">39</span>: 249-258.
+
+</span>
+      </li>
+      
+<li id="bib.bib11" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">11</span>
+        
+<span class="ltx_bibblock">
+I.C. Baianu. 1978. X-ray Scattering by Partially Disordered Membrane Lattices.
+<em class="ltx_emph ltx_font_italic">Acta Crystall</em>. <span class="ltx_text ltx_font_bold">A34</span>: 731-753. (<em class="ltx_emph ltx_font_italic">paper contributed from The Cavendish Laboratory, Cambridge in 1979</em>).
+
+</span>
+      </li>
+      
+<li id="bib.bib12" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">12</span>
+        
+<span class="ltx_bibblock">
+I.C. Baianu. 1980. Structural Order and Partial Disorder in Biological Systems. <em class="ltx_emph ltx_font_italic">Bull. Math. Biol.</em>, 42: 186-191.
+(<em class="ltx_emph ltx_font_italic">paper contributed from The Cavendish Laboratory, Cambridge in 1979</em>).
+
+</span>
+      </li>
+      
+<li id="bib.bib13" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">13</span>
+        
+<span class="ltx_bibblock">
+I. C. Baianu, C. Critchley, Govindjee, AND H. S. Gutowsky. 1984.
+NMR study of chloride ion interactions with thylakoid membranes
+<span class="ltx_text ltx_font_italic">Proced. Natl. Acad. Sci. USA (Biophysics)</span>., Vol. 81, pp. 3713–3717, June 1984,
+(Key words: photosynthesis/oxygen evolution/chloride binding/chlorine–35/halophytes).
+
+</span>
+      </li>
+      
+<li id="bib.bib14" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">14</span>
+        
+<span class="ltx_bibblock">
+Baianu, I. C.: 1986-1987a, Computer Models and Automata Theory in Biology and Medicine., in M. Witten (ed.), <em class="ltx_emph ltx_font_italic">Mathematical Models in Medicine</em>, vol. 7., Ch.11 Pergamon Press, New York, 1513 -1577;
+available downloads as: <em class="ltx_emph ltx_font_italic">CERN Preprint No. EXT-2004-072</em>-
+<span class="ltx_text ltx_font_typewriter">http://doe.cern.ch//archive/electronic/other/ext/ext-2004-072.pdf</span>CERN Preprint as PDF, or
+<span class="ltx_text ltx_font_typewriter">http://en.scientificcommons.org/1857371</span>as external html document .
+
+</span>
+      </li>
+      
+<li id="bib.bib15" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">15</span>
+        
+<span class="ltx_bibblock">
+Baianu, I. C.: 1987b, Molecular Models of Genetic and Organismic Structures, in <em class="ltx_emph ltx_font_italic">Proceed. Relational Biology Symp.</em>
+Argentina; <span class="ltx_text ltx_font_typewriter">http://doc.cern.ch/archive/electronic/other/ext/extusers/2004
+67/MolecularModels-ICB3.doc</span>CERN Preprint No.EXT-2004-067.
+
+</span>
+      </li>
+      
+<li id="bib.bib16" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">16</span>
+        
+<span class="ltx_bibblock">
+Baianu, I. C.: 1983, Natural Transformation Models in Molecular Biology., in <em class="ltx_emph ltx_font_italic">Proceedings of the SIAM Natl. Meet</em>., Denver,CO.; 
+<br class="ltx_break"><span class="ltx_text ltx_font_typewriter">http://cogprints.org/3675/</span>Eprint: and
+<span class="ltx_text ltx_font_typewriter">http://cogprints.org/3675/0l/Naturaltransfmolbionu6.pdf</span>html document.
+
+</span>
+      </li>
+      
+<li id="bib.bib17" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">17</span>
+        
+<span class="ltx_bibblock">
+Baianu, I.C.: 1984, A Molecular-Set-Variable Model of Structural and Regulatory Activities in Metabolic and Genetic Networks, <em class="ltx_emph ltx_font_italic">FASEB Proceedings</em> <span class="ltx_text ltx_font_bold">43</span>, 917.
+
+</span>
+      </li>
+      
+<li id="bib.bib18" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">18</span>
+        
+<span class="ltx_bibblock">
+Baianu, I.C.: 2004a. Łukasiewicz-Topos Models of Neural Networks, Cell Genome and Interactome Nonlinear Dynamic Models (2004). Eprint. Cogprints–Sussex Univ.
+
+</span>
+      </li>
+      
+<li id="bib.bib19" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">19</span>
+        
+<span class="ltx_bibblock">
+Baianu, I.C.: 2004b Łukasiewicz-Topos Models of Neural Networks, Cell Genome and Interactome Nonlinear Dynamics). CERN Preprint EXT-2004-059. <span class="ltx_text ltx_font_italic">Health Physics and Radiation Effects</span> (June 29, 2004).
+
+</span>
+      </li>
+      
+<li id="bib.bib20" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">20</span>
+        
+<span class="ltx_bibblock">
+Baianu, I. C., Glazebrook, J. F. and G. Georgescu: 2004, Categories of Quantum Automata and N-Valued Łukasiewicz Algebras in Relation to Dynamic Bionetworks, <span class="ltx_text ltx_font_bold">(M,R)</span>–Systems and Their Higher Dimensional Algebra, 
+<br class="ltx_break"><span class="ltx_text ltx_font_typewriter">http://www.ag.uiuc.edu/fs401/QAuto.pdf</span>Abstract and Preprint of Report as PDF or
+as <span class="ltx_text ltx_font_typewriter">http://www.medicalupapers.com/quantum+automata+math+categories+baianu/</span>an html document.
+
+</span>
+      </li>
+      
+<li id="bib.bib21" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">21</span>
+        
+<span class="ltx_bibblock">
+Baianu, I. C.: 2004b, Quantum Interactomics and Cancer Mechanisms,
+<span class="ltx_text ltx_font_typewriter">http: bioline.utsc.utoronto.ca/archive/00001978/01/
+<br class="ltx_break">Quantum Interactomics In Cancer--Sept13k4E-- cuteprt.pdf</span>Preprint No. 00001978.
+
+</span>
+      </li>
+      
+<li id="bib.bib22" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">22</span>
+        
+<span class="ltx_bibblock">
+Baianu, I. C.: 2006, Robert Rosen’s Work and Complex Systems Biology, <em class="ltx_emph ltx_font_italic">Axiomathes</em> <span class="ltx_text ltx_font_bold">16</span>(1–2):25–34.
+
+</span>
+      </li>
+      
+<li id="bib.bib23" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">23</span>
+        
+<span class="ltx_bibblock">
+Baianu I. C., Brown R., Georgescu G. and J. F. Glazebrook: 2006, Complex Nonlinear Biodynamics in Categories, Higher Dimensional Algebra and Łukasiewicz-Moisil Topos: Transformations of Neuronal, Genetic and Neoplastic Networks., <em class="ltx_emph ltx_font_italic">Axiomathes</em>, <span class="ltx_text ltx_font_bold">16</span> Nos. 1-2: 65-122.
+
+</span>
+      </li>
+      
+<li id="bib.bib24" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">24</span>
+        
+<span class="ltx_bibblock">
+Baianu, I.C., R. Brown and J.F. Glazebrook. : 2007, Categorical Ontology of Complex Spacetime Structures: The Emergence of Life and Human Consciousness, <em class="ltx_emph ltx_font_italic">Axiomathes</em>, <span class="ltx_text ltx_font_bold">17</span>: 35-168.
+
+</span>
+      </li>
+      
+<li id="bib.bib25" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">25</span>
+        
+<span class="ltx_bibblock">
+Baianu, I.C. et al. 2009. <span class="ltx_text ltx_font_typewriter">http://planetphysics.org/?op=getobj&amp;from=books&amp;id=220</span>“DNA Molecular Structure, Dynamics and Spectroscopy.” (Free GNUL download.)
+
+</span>
+      </li>
+      
+<li id="bib.bib26" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">26</span>
+        
+<span class="ltx_bibblock">
+R. Hosemann and S. N. Bagchi. 1962. <em class="ltx_emph ltx_font_italic">Direct Analysis of Diffraction by Matter</em>. Amsterdam: North Holland.
+
+</span>
+      </li>
+      
+<li id="bib.bib27" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">27</span>
+        
+<span class="ltx_bibblock">
+D. Voet and J.G. Voet. 1995. <em class="ltx_emph ltx_font_italic">Biochemistry</em>. 2nd Edition, New York, Chichester, Brisbone, Toronto,
+Singapore: J. Wiley and Sons, INC., 1,361 pages, over 3,000 high-resolution molecular models in color – (<em class="ltx_emph ltx_font_italic">an excellently illustrated textbook</em>)
+
+</span>
+      </li>
+      
+<li id="bib.bib28" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">28</span>
+        
+<span class="ltx_bibblock">
+Robert Rosen. 1997 and 2002. <em class="ltx_emph ltx_font_italic">Essays on Life Itself</em>.
+
+</span>
+      </li>
+      
+<li id="bib.bib29" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">29</span>
+        
+<span class="ltx_bibblock">
+Rosen, R.: 1958a, A Relational Theory of Biological Systems
+<em class="ltx_emph ltx_font_italic">Bulletin of Mathematical Biophysics</em> <span class="ltx_text ltx_font_bold">20</span>: 245-260.
+
+</span>
+      </li>
+      
+<li id="bib.bib30" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">30</span>
+        
+<span class="ltx_bibblock">
+Rosen, R.: 1958b, The Representation of Biological Systems from the Standpoint of the Theory of Categories.,
+<em class="ltx_emph ltx_font_italic">Bulletin of Mathematical Biophysics</em> <span class="ltx_text ltx_font_bold">20</span>: 317-341.
+
+</span>
+      </li>
+      
+<li id="bib.bib31" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">31</span>
+        
+<span class="ltx_bibblock">
+Rosen, R. 1960. A quantum-theoretic approach to genetic problems. <em class="ltx_emph ltx_font_italic">Bulletin of Mathematical Biophysics</em>
+22: 227-255.
+
+</span>
+      </li>
+      
+<li id="bib.bib32" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">32</span>
+        
+<span class="ltx_bibblock">
+Rosen, R.: 1987, On Complex Systems, <em class="ltx_emph ltx_font_italic">European Journal of Operational Research</em>
+<span class="ltx_text ltx_font_bold">30</span>, 129-134.
+
+</span>
+      </li>
+      
+<li id="bib.bib33" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">33</span>
+        
+<span class="ltx_bibblock">
+Rosen,R. 1970, <em class="ltx_emph ltx_font_italic">Dynamical Systems Theory in Biology</em>. New York: Wiley Interscience.
+
+</span>
+      </li>
+      
+<li id="bib.bib34" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">34</span>
+        
+<span class="ltx_bibblock">
+Rosen,R. 1970, <em class="ltx_emph ltx_font_italic">Optimality Principles in Biology</em>, New York and London: Academic Press.
+
+</span>
+      </li>
+      
+<li id="bib.bib35" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">35</span>
+        
+<span class="ltx_bibblock">
+Rosen,R. 1978, <em class="ltx_emph ltx_font_italic">Fundamentals of Measurement and Representation of Natural Systems</em>, Elsevier Science Ltd,
+
+</span>
+      </li>
+      
+<li id="bib.bib36" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">36</span>
+        
+<span class="ltx_bibblock">
+Rosen,R. 1985, <em class="ltx_emph ltx_font_italic">Anticipatory Systems: Philosophical, Mathematical and Methodological Foundations</em>. Pergamon Press.
+
+</span>
+      </li>
+      
+<li id="bib.bib37" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">37</span>
+        
+<span class="ltx_bibblock">
+Rosen,R. 1991, <em class="ltx_emph ltx_font_italic">Life Itself: A Comprehensive Inquiry into the Nature, Origin, and Fabrication of Life</em>, Columbia University Press
+
+</span>
+      </li>
+      
+<li id="bib.bib38" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">38</span>
+        
+<span class="ltx_bibblock">
+Ehresmann, C.: 1984, <em class="ltx_emph ltx_font_italic">Oeuvres complètes et commentées: Amiens, 1980-84</em>, edited and commented
+by Andrée Ehresmann.
+
+</span>
+      </li>
+      
+<li id="bib.bib39" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">39</span>
+        
+<span class="ltx_bibblock">
+Ehresmann, A. C. and J.-P. Vanbremersch: 2006, The Memory Evolutive Systems as a Model of Rosen’s Organisms,
+in <em class="ltx_emph ltx_font_italic">Complex Systems Biology</em>, I.C. Baianu, Editor, <em class="ltx_emph ltx_font_italic">Axiomathes</em> <span class="ltx_text ltx_font_bold">16</span> (1–2), pp. 13-50.
+
+</span>
+      </li>
+      
+<li id="bib.bib40" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">40</span>
+        
+<span class="ltx_bibblock">
+Eilenberg, S. and Mac Lane, S.: 1942, Natural Isomorphisms in Group Theory., <em class="ltx_emph ltx_font_italic">American Mathematical Society 43</em>: 757-831.
+
+</span>
+      </li>
+      
+<li id="bib.bib41" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">41</span>
+        
+<span class="ltx_bibblock">
+Eilenberg, S. and Mac Lane, S.: 1945, The General Theory of Natural Equivalences,
+<em class="ltx_emph ltx_font_italic">Transactions of the American Mathematical Society</em> 58: 231-294.
+
+</span>
+      </li>
+      
+<li id="bib.bib42" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">42</span>
+        
+<span class="ltx_bibblock">
+Elsasser, M.W.: 1981, A Form of Logic Suited for Biology., In: Robert, Rosen, ed., <em class="ltx_emph ltx_font_italic">Progress in Theoretical Biology</em>, Volume 6, Academic Press, New York and London, pp 23-62.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">mathematical biology and theoretical biophysics of DNA</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MathematicalBiologyAndTheoreticalBiophysicsOfDNA</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:18:09</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:18:09</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">110</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 93A05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 92B20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 92B05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18D35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">theoretical biology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">mathematical biophysics</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ComplexSystemsBiology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryOfSets</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HamiltonianOperatorOfAQuantumSystem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">BibliographyForMathematicalBiophysics</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryOfMRSystems3</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RobertRosen</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">NicolasRashevsky</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Quaternions</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SimilarityAndAnalogousSystemsDynamicAdjointness2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PhysicalMathematicsAndEng</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">A- and B- DNA paracrystals</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:40:35 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

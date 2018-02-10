@@ -1,0 +1,214 @@
+<!DOCTYPE html><html>
+<head>
+<title>stability of transfer functions in the Laplace domain</title>
+<!--Generated on Sat Feb 10 13:40:42 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">stability of transfer functions in the Laplace domain</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The following describes SISO (single input single output) system descriptions.
+More complex systems require a more sophisticated analysis.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">For a general transfer function, <math id="p2.m1" class="ltx_Math" alttext="H(s)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math>, in Laplace domain, we have</p>
+</div>
+<div id="p3" class="ltx_para">
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle H(s)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E1.m2" class="ltx_Math" alttext="\displaystyle=\frac{\prod_{i=0}^{Z}(s-z_{i})}{\prod_{i=0}^{P}(s-p_{i})}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>Z</mi></msubsup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>z</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>P</mi></msubsup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The conclusions below can all be derived and understood by expansion of <math id="p4.m1" class="ltx_Math" alttext="H(s)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math> in
+terms of partial fractions, and then doing a inverse Laplace
+transform fraction by fraction.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><math id="p5.m1" class="ltx_Math" alttext="z_{i}" display="inline"><msub><mi>z</mi><mi>i</mi></msub></math> denotes the zeros and <math id="p5.m2" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math> denotes the poles of the
+linear time invariant system (LTI). Stability of the system <math id="p5.m3" class="ltx_Math" alttext="H(s)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math> is
+characterized by the location of the poles in the complex s-plane.
+There are many definitions
+of stability in the control system literature, the most common one
+used (for transfer functions) is the bounded-input-bounded-output
+stability (BIBO), which states that for a BIBO stable system, for any
+bounded input, or finite amplitude input, the output of the system
+will also be bounded.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">For example, a typical second order system such as the
+mass-spring-dashpot system has the following transfer function,</p>
+</div>
+<div id="p7" class="ltx_para">
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle H(p)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E2.m2" class="ltx_Math" alttext="\displaystyle=\frac{\omega^{2}}{p^{2}+2\zeta\omega p+\omega^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><msup><mi>ω</mi><mn>2</mn></msup><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>ζ</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>p</mi></mrow><mo>+</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">with a pair of complex poles at <math id="p8.m1" class="ltx_Math" alttext="p=-\zeta\omega\pm\omega\sqrt{\zeta^{2}-1}" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><mi>ω</mi></mrow></mrow><mo>±</mo><mrow><mi>ω</mi><mo>⁢</mo><msqrt><mrow><msup><mi>ζ</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow></mrow></mrow></math>. In common control system literature, <math id="p8.m2" class="ltx_Math" alttext="\zeta" display="inline"><mi>ζ</mi></math> is
+usually denoted as the <em class="ltx_emph ltx_font_italic">damping ratio</em> and <math id="p8.m3" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is denoted as
+the <em class="ltx_emph ltx_font_italic">natural frequency</em> of the system. In the case of the
+mass-spring-dashpot system, we can tell that the oscillation of the
+mass attached to a spring should be a function of the weight of the
+mass and the stiffness of the spring, hence in the literature we have
+<math id="p8.m4" class="ltx_Math" alttext="\omega=\sqrt{\frac{K}{M}}" display="inline"><mrow><mi>ω</mi><mo>=</mo><msqrt><mfrac><mi>K</mi><mi>M</mi></mfrac></msqrt></mrow></math>, where <math id="p8.m5" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is the spring constant and
+<math id="p8.m6" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is the weight of the mass. From the same logic, the amount time
+for the mass to stop oscillating should be a function of the spring
+stiffness and the characteristics of the dashpot, so we have <math id="p8.m7" class="ltx_Math" alttext="\zeta=\frac{D\omega}{2K}" display="inline"><mrow><mi>ζ</mi><mo>=</mo><mfrac><mrow><mi>D</mi><mo>⁢</mo><mi>ω</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow></mfrac></mrow></math>, where <math id="p8.m8" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is the dashpot constant.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">To determine is the system <math id="p9.m1" class="ltx_Math" alttext="H(p)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math> BIBO stable, the simplest solution
+is to scrutinize the time domain solution of  <a href="#S0.E2" title="(2) ‣ stability of transfer functions in the Laplace domain" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> via
+inverse Laplace transform, and such discussion can easily be found in
+common control system related text books and online lecture notes.
+However, such approach tells nothing about the <em class="ltx_emph ltx_font_italic">physical nature</em>
+of the dynamic system, so here I will try to establish relationship
+between the location of the poles and the stability of the system.
+Here I first state that the system in  <a href="#S0.E2" title="(2) ‣ stability of transfer functions in the Laplace domain" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>,
+specifically the mass-spring-dashpot system, is stable,
+since it is physically impossible for the system to produce an output
+increasing in amplitude forever as time goes to infinity.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">First let’s consider an ideal mass-spring system. If we push the mass
+once (impulse response), the mass will oscillate
+forever with the same amplitude and frequency, since there are no
+dashpot to dampen the motion. In this case, <math id="p10.m1" class="ltx_Math" alttext="D=0\rightarrow\zeta=0" display="inline"><mrow><mi>D</mi><mo>=</mo><mn>0</mn><mo>→</mo><mi>ζ</mi><mo>=</mo><mn>0</mn></mrow></math>, which the pair of complex poles of the system will be located on
+the imaginary axis of the complex s-plane, and the stronger the spring
+(<math id="p10.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is large) the further away the poles from the origin. So the
+imaginary part of the poles <math id="p10.m3" class="ltx_Math" alttext="img(p_{i})" display="inline"><mrow><mi>i</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> dominates the oscillatory nature of the
+system. Now let’s assume that we have a relatively weak spring compare
+to the dashpot that we are going to add to the system, so the real
+part of the poles <math id="p10.m4" class="ltx_Math" alttext="real(p_{i})" display="inline"><mrow><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> will be dominating. If we push the mass
+the same way as before, now we can expect the mass to oscillate for
+sometime then come to a rest, depending on the strength of the
+dashpot. The stronger the dashpot, the further away the poles from
+the origin along the real axis on the s-plane. We have almost covered
+the whole left-hand side of the s-plane, and so far we have the following
+observations.</p>
+</div>
+<div id="p11" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The imaginary part of complex poles correspond to oscillatory energy storage
+mechanisms. Note if the original differential equation has real coefficients,
+the complex poles are always in complex conjugate pairs . As a result
+these can always be represented by sine and cos terms in the time domain.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The real parts of poles govern the decay rate of responses to
+stimulations; with negative values corresponding to decaying terms, and positive
+parts to growth terms (which are not stable).</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">The ratio between the real and imaginary parts of the poles govern the shape of the
+response. In particular ratios less than one hide the visible part of the oscillatory terms in the
+time domain.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Poles that have neither real or imaginary parts, i.e. at the origin,
+correspond to successive integrations in the time domain. One integration for
+each pole. Since these have an unbounded output for a step input, systems like these are
+not BIBO; but are common.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">For a system consisted of poles with imaginary parts only, <math id="p12.m1" class="ltx_Math" alttext="p_{i}=\pm j\omega" display="inline"><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>=</mo><mrow><mo>±</mo><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi></mrow></mrow></mrow></math>, it is usually referred to as a <span class="ltx_text ltx_font_italic">marginally stable
+system. Notice that the real part of the poles for system
+ <a href="#S0.E2" title="(2) ‣ stability of transfer functions in the Laplace domain" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> are always negative, since both <math id="p12.m2" class="ltx_Math" alttext="\zeta" display="inline"><mi>ζ</mi></math> and
+<math id="p12.m3" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> are always positive. If a stable system has negative poles
+(real or complex), unstable system must has positives poles, in the
+right-hand side of the s-plane. This can easily be visualize if we
+place a amplifier (with <math id="p12.m4" class="ltx_Math" alttext="-\zeta" display="inline"><mrow><mo mathvariant="normal">-</mo><mi>ζ</mi></mrow></math>) instead of a dashpot in the system.</span></p>
+</div>
+<div id="p13" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t"><span class="ltx_text ltx_font_italic">Title</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_italic">stability of transfer functions in the Laplace domain</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Canonical name</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">StabilityOfTransferFunctionsInTheLaplaceDomain</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Date of creation</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">2013-03-22 14:22:41</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Last modified on</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">2013-03-22 14:22:41</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Owner</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">rrogers (21140)</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Last modified by</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">rrogers (21140)</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Numerical id</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">11</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Author</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">rrogers (21140)</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Entry type</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">Definition</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l"><span class="ltx_text ltx_font_italic">Classification</span></th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r"><span class="ltx_text ltx_font_italic">msc 93A10</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:40:42 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
