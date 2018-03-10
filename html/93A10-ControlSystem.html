@@ -18,8 +18,8 @@
 
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
-<p class="ltx_p">The sole objective of control system is to generate feasible inputs
-to the plant (e.g. dynamic systems) such that it will operate as it
+<p class="ltx_p">The sole objective of <a class="nnexus_concept" href="http://planetmath.org/controlsystem">control system</a> is to generate feasible inputs
+to the plant (e.g. <a class="nnexus_concept" href="http://planetmath.org/generalsystemdefinitions">dynamic systems</a>) such that it will operate as it
 intended to under a wide range of operating conditions.</p>
 </div>
 <div id="p2" class="ltx_para">
@@ -50,7 +50,7 @@ intended to under a wide range of operating conditions.</p>
 <p class="ltx_p">where <math id="p5.m1" class="ltx_Math" alttext="x\in\mathbb{R}^{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math> is the state, <math id="p5.m2" class="ltx_Math" alttext="y\in\mathbb{R}^{l}" display="inline"><mrow><mi>y</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>l</mi></msup></mrow></math> is the
 output and <math id="p5.m3" class="ltx_Math" alttext="u\in\mathbb{R}^{m}" display="inline"><mrow><mi>u</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow></math> is the control input of the system.
 In the control literature, equation <a href="#S0.E1" title="(1) ‣ control system" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> is general referred
-as the plant, where the function <math id="p5.m4" class="ltx_Math" alttext="f:\mathbb{R}^{n}\times\mathbb{R}\rightarrow\mathbb{R}^{n}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>×</mo><mi>ℝ</mi></mrow><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> governs the system dynamics, <math id="p5.m5" class="ltx_Math" alttext="g:\mathbb{R}^{m}\times\mathbb{R}^{n}\times\mathbb{R}\rightarrow\mathbb{R}^{n}" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mrow><msup><mi>ℝ</mi><mi>m</mi></msup><mo>×</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>×</mo><mi>ℝ</mi></mrow><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> determines how the input (control signals)
+as the plant, where the function <math id="p5.m4" class="ltx_Math" alttext="f:\mathbb{R}^{n}\times\mathbb{R}\rightarrow\mathbb{R}^{n}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>×</mo><mi>ℝ</mi></mrow><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> governs the <a class="nnexus_concept" href="http://planetmath.org/organismicsupercategoriesandsupercomplexsystemsbiodynamics">system dynamics</a>, <math id="p5.m5" class="ltx_Math" alttext="g:\mathbb{R}^{m}\times\mathbb{R}^{n}\times\mathbb{R}\rightarrow\mathbb{R}^{n}" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mrow><msup><mi>ℝ</mi><mi>m</mi></msup><mo>×</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>×</mo><mi>ℝ</mi></mrow><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> determines how the input (control signals)
 influence the state <math id="p5.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> via <span class="ltx_text ltx_font_italic">actuators</span> (e.g. gas turbine) and
 <math id="p5.m7" class="ltx_Math" alttext="h:\mathbb{R}^{n}\times\mathbb{R}\rightarrow\mathbb{R}^{l}" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>×</mo><mi>ℝ</mi></mrow><mo>→</mo><msup><mi>ℝ</mi><mi>l</mi></msup></mrow></mrow></math>
 determines how the state generates the output signal. If <math id="p5.m8" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is equal to <math id="p5.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, the plant is
@@ -89,11 +89,11 @@ errors and measurement errors.</p>
 contol system is called a <span class="ltx_text ltx_font_italic">state-feedback</span> control system. By the
 same token, a <span class="ltx_text ltx_font_italic">output-feedback</span> control system is based on output
 feedback only. Notice that output signals are available for feedback
-by definition, however in reality not all the states are mesurable. If
+by <a class="nnexus_concept" href="http://planetmath.org/definition">definition</a>, however in reality not all the states are mesurable. If
 a state-feedback control system with all the states available for
 feedback, it is called a <span class="ltx_text ltx_font_italic">full-state feedback</span> system and otherwise
 is call <span class="ltx_text ltx_font_italic">partial-state feedback</span> system, which usually requires a <span class="ltx_text ltx_font_italic">state
-observer</span> (e.g. Kalman filter) to estimate the unavailable states.</p>
+observer</span> (e.g. <a class="nnexus_concept" href="http://mathworld.wolfram.com/KalmanFilter.html">Kalman filter</a>) to estimate the unavailable states.</p>
 </div>
 <div id="p9" class="ltx_para">
 <p class="ltx_p">To illustrate the simple concept of control systems, we will use a
@@ -107,8 +107,8 @@ destination in time. To remedy this problem, the driver ’implemented’
 a simple solution using the speed-o-meter such that the gas paddle position
 <math id="p9.m2" class="ltx_Math" alttext="p_{set}" display="inline"><msub><mi>p</mi><mrow><mi>s</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>t</mi></mrow></msub></math> of the truck is now depends on the current speed
 <math id="p9.m3" class="ltx_Math" alttext="v_{current}" display="inline"><msub><mi>v</mi><mrow><mi>c</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></msub></math> of the truck, <math id="p9.m4" class="ltx_Math" alttext="p_{set}=-K(v_{current}-\,\mathrm{100Km/h})" display="inline"><mrow><msub><mi>p</mi><mrow><mi>s</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo>=</mo><mrow><mo>-</mo><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>v</mi><mrow><mi>c</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo>-</mo><mrow><mrow><mn> 100</mn><mo>⁢</mo><mi>Km</mi></mrow><mo>/</mo><mi mathvariant="normal">h</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>,
-where <math id="p9.m5" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is just an adjustable parameter. So if the truck is running
-too slow (e.g. up-hill), <math id="p9.m6" class="ltx_Math" alttext="p_{set}" display="inline"><msub><mi>p</mi><mrow><mi>s</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>t</mi></mrow></msub></math> will be positive (more gas to the
+where <math id="p9.m5" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is just an adjustable <a class="nnexus_concept" href="http://planetmath.org/parametre">parameter</a>. So if the truck is <a class="nnexus_concept" href="http://planetmath.org/summation">running</a>
+too slow (e.g. up-hill), <math id="p9.m6" class="ltx_Math" alttext="p_{set}" display="inline"><msub><mi>p</mi><mrow><mi>s</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>t</mi></mrow></msub></math> will be <a class="nnexus_concept" href="http://planetmath.org/positive">positive</a> (more gas to the
 engine) hence speed will increase to maintain the desired speed, so
 vice-versa for the down-hill case.</p>
 </div>
@@ -172,7 +172,7 @@ real-life situation and limitations.</p>
 <td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">control system</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://planetmath.org/canonical">Canonical</a> name</th>
 <td class="ltx_td ltx_align_left ltx_border_r">ControlSystem</td>
 </tr>
 <tr class="ltx_tr">
